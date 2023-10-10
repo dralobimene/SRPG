@@ -12,6 +12,7 @@ from classes.utilitaires.utilitaires_01 import Utilitaires01
 
 from logger_config import configure_logger
 # méthodes du logger (debug(), info(), warning(), error(), critical())
+# TEST
 logger = configure_logger(__name__, 'logs/screen01_choose_mode.log')
 
 
