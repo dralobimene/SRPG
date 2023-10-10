@@ -1,0 +1,141 @@
+2023-10-10 16:04:29,640 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:29,641 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:29,641 - screen04_create_character - DEBUG - >>> class: Screen04CreateCharacter
+2023-10-10 16:04:29,641 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:29,641 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:29,641 - screen04_create_character - DEBUG - >>> method: def __init__()
+2023-10-10 16:04:29,641 - screen04_create_character - INFO - Le fichier settings.json existe.
+2023-10-10 16:04:29,641 - screen04_create_character - INFO - Le fichier settings.json est accessible en lecture.
+2023-10-10 16:04:29,650 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:29,650 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:29,650 - screen04_create_character - DEBUG - >>> method: def read_temp_settings_file()
+2023-10-10 16:04:29,650 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:29,651 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:29,651 - screen04_create_character - DEBUG - Fin de la method: def read_temp_settings_file() <<<
+2023-10-10 16:04:29,651 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:29,651 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:29,651 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:29,651 - screen04_create_character - DEBUG - Fin de la method: def __init__() <<<
+2023-10-10 16:04:29,651 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,154 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - >>> method: def is_character_valid()
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - >>> method: def update_ui()
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - Fin de la method: def update_ui() <<<
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - Fin de la method: def is_character_valid() <<<
+2023-10-10 16:04:32,155 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - >>> method: def is_character_valid()
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - >>> method: def update_ui()
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - Fin de la method: def update_ui() <<<
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - Fin de la method: def is_character_valid() <<<
+2023-10-10 16:04:32,245 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - >>> method: def is_character_valid()
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - >>> method: def update_ui()
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - Fin de la method: def update_ui() <<<
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - Fin de la method: def is_character_valid() <<<
+2023-10-10 16:04:32,282 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,371 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,371 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,371 - screen04_create_character - DEBUG - >>> method: def is_character_valid()
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - >>> method: def update_ui()
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - Fin de la method: def update_ui() <<<
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - Fin de la method: def is_character_valid() <<<
+2023-10-10 16:04:32,372 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,471 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,471 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,471 - screen04_create_character - DEBUG - >>> method: def is_character_valid()
+2023-10-10 16:04:32,471 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,471 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,471 - screen04_create_character - DEBUG - >>> method: def update_ui()
+2023-10-10 16:04:32,472 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,472 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,472 - screen04_create_character - DEBUG - Fin de la method: def update_ui() <<<
+2023-10-10 16:04:32,472 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,472 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,472 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,472 - screen04_create_character - DEBUG - Fin de la method: def is_character_valid() <<<
+2023-10-10 16:04:32,472 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - >>> method: def is_character_valid()
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - >>> method: def update_ui()
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - Fin de la method: def update_ui() <<<
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - Fin de la method: def is_character_valid() <<<
+2023-10-10 16:04:32,527 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:33,019 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:33,019 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:33,019 - screen04_create_character - DEBUG - >>> method: def roll_dice()
+2023-10-10 16:04:33,019 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:33,019 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:33,019 - screen04_create_character - DEBUG - >>> method: def is_character_valid()
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - >>> method: def update_ui()
+2023-10-10 16:04:33,020 - screen04_create_character - INFO - La valeur de la clé 'mode' est : multiplayer
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - Fin de la method: def update_ui() <<<
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - Fin de la method: def roll_dice() <<<
+2023-10-10 16:04:33,020 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:35,890 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:35,890 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:35,890 - screen04_create_character - DEBUG - >>> method: def set_network_settings()
+2023-10-10 16:04:35,890 - screen04_create_character - INFO - Player wants to set network settings.
+2023-10-10 16:04:35,891 - screen04_create_character - INFO - We need to set GUI and settings.
+2023-10-10 16:04:35,891 - screen04_create_character - DEBUG - 
+2023-10-10 16:04:35,891 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:35,891 - screen04_create_character - DEBUG - Fin de la method: def set_network_settings() <<<
+2023-10-10 16:04:35,891 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:42,860 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:42,861 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:42,861 - screen04_create_character - DEBUG - >>> method: def connect_to_server()
+2023-10-10 16:04:42,861 - screen04_create_character - DEBUG - ========================================================
+2023-10-10 16:04:42,861 - screen04_create_character - DEBUG - File: screen04_create_character.py
+2023-10-10 16:04:42,861 - screen04_create_character - DEBUG - >>> method: def actual_connect()
+2023-10-10 16:04:44,861 - screen04_create_character - INFO - Connection to server is running...
+2023-10-10 16:04:46,097 - screen04_create_character - INFO - Vérificat° du fichier settings.json
+2023-10-10 16:04:46,097 - screen04_create_character - INFO - Le fichier settings.json existe
+2023-10-10 16:04:46,097 - screen04_create_character - INFO - Le fichier settings.json est inscriptible
+2023-10-10 16:04:46,097 - screen04_create_character - INFO - Ecriture de l'IP: 192.168.1.90
