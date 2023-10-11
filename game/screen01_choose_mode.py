@@ -1,7 +1,7 @@
 # Fichier: screen01_choose_mode.py
 
 # Commande pour executer le programme:
-# PYTHONPATH="/home/sambano/Documents/python/jeu02/v07/game" python3.11 /home/sambano/Documents/python/jeu02/v07/game/screen01_choose_mode.py
+# PYTHONPATH="/home/XXX/Documents/python/jeu02/v07/game" python3.11 /home/XXX/Documents/python/jeu02/v07/game/screen01_choose_mode.py
 
 import tkinter as tk
 import os
