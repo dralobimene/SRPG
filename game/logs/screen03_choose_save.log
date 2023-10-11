@@ -1,0 +1,12 @@
+2023-10-10 17:00:42,626 - screen03_choose_save - DEBUG - ========================================================
+2023-10-10 17:00:42,626 - screen03_choose_save - DEBUG - File: screen03_choose_save.py
+2023-10-10 17:00:42,626 - screen03_choose_save - DEBUG - >>> class: Screen03ChooseSave
+2023-10-10 17:00:42,626 - screen03_choose_save - DEBUG - ========================================================
+2023-10-10 17:00:42,626 - screen03_choose_save - DEBUG - File: screen03_choose_save.py
+2023-10-10 17:00:42,626 - screen03_choose_save - DEBUG - >>> method: def __init__()
+2023-10-10 17:00:42,626 - screen03_choose_save - INFO - Le fichier settings.json existe.
+2023-10-10 17:00:42,626 - screen03_choose_save - INFO - Le fichier settings.json est accessible en lecture.
+2023-10-10 17:00:42,634 - screen03_choose_save - DEBUG - 
+2023-10-10 17:00:42,635 - screen03_choose_save - DEBUG - File: screen03_choose_save.py
+2023-10-10 17:00:42,635 - screen03_choose_save - DEBUG - Fin de la method: def __init__() <<<
+2023-10-10 17:00:42,635 - screen03_choose_save - DEBUG - ========================================================

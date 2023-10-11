@@ -1,28 +1,37 @@
+# client.py
+
 import socket
+
 from websocket import create_connection
+from datetime import datetime
 
 
-def get_local_ip_address(target):
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    try:
-        s.connect((target, 1))
-        IP = s.getsockname()[0]
-    except Exception:
-        IP = '127.0.0.1'
-    finally:
-        s.close()
-    return IP
+class WebSocketClient:
+    def __init__(self, target):
+        self.target = target
+        self.ws = None
 
+    def get_local_ip_address(self):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        try:
+            sock.connect((self.target, 1))
+            IP = sock.getsockname()[0]
+        except Exception:
+            IP = '127.0.0.1'
+        finally:
+            sock.close()
+        return IP
 
-client_ip = get_local_ip_address('192.168.1.210')
-ws = create_connection("ws://192.168.1.210:8888/websocket")
+    def connect(self):
+        self.ws = create_connection(f"ws://{self.target}:8888/websocket")
+        client_ip = self.get_local_ip_address()
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # Reçu sur le serveur.
+        self.ws.send(
+            f"Depuis le fichier client.py: {current_time}, adresse IP: {client_ip}")
 
-ws.send(f"Hello, je suis le client dont l'adresse IP est: {client_ip}")
+    def receive(self):
+        return self.ws.recv()
 
-result1 = ws.recv()
-print(f"Reçu '{result1}'")
-
-result2 = ws.recv()
-print(f"Reçu '{result2}'")
-
-ws.close()
+    def close(self):
+        self.ws.close()

@@ -3,6 +3,7 @@
 import tkinter as tk
 import sys
 import os
+import json
 
 from classes.utilitaires.utilitaires_01 import Utilitaires01
 
@@ -124,21 +125,103 @@ class Screen02PlayOrRunSave:
 
         logger.info("player wants to play new game")
 
-        self.root.destroy()
-        new_root = tk.Tk()
-        import screen04_create_character
-        screen04_create_character.Screen04CreateCharacter(new_root)
-        new_root.mainloop()
+        # --------------------------------------------------------------------
+        # Ecrire la clé qui contient le type de partie (new game or save)
+        # ds le fichier "settings.json".
+        # Verifier que le fichier settings.json existe.
+        logger.info(f"Vérificat° du fichier {self.settings_file}")
+        file_network = self.settings_file
+        file_writable = True
+        if file_network:
+            logger.info(f"Le fichier {file_network} existe")
+            file_writable = os.access(file_network, os.W_OK)
+        else:
+            logger.info(f"Le fichier {file_network} n'existe pas")
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen04_create_character.py",
+                                           "method: def connect_to_server()")
 
-        Utilitaires01.log_exit_message(logger,
-                                       "debug",
-                                       "screen02_play_or_run_save.py",
-                                       "method: def play_new_game()")
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen04_create_character.py",
+                                           "class: Screen04CreateCharacter")
 
-        Utilitaires01.log_exit_message(logger,
-                                       "debug",
-                                       "screen02_play_or_run_save.py",
-                                       "class: Screen02PlayOrRunSave")
+            sys.exit()
+
+        # Si le fichier settings.json existe ET s'il est accessible
+        # en ecriture alors:
+        # Ajouter en fin de fichier la valeur qui défini si
+        # l'utilisateur démarre une nvelle partie ou 1 partie sauvegardée.
+        if file_network and file_writable:
+            logger.info(f"Le fichier {file_network} est inscriptible")
+            logger.info("Ecriture du type de partie (new game or save)")
+
+            # Vérifier si le fichier existe
+            if os.path.exists(file_network):
+                # Charger les données existantes
+                with open(file_network, 'r') as f:
+                    data = json.load(f)
+
+                # Ajouter la nouvelle paire clé => valeur
+                new_key = "type_game"
+                new_value = "new_game"
+                data[new_key] = new_value
+
+                # Réecrire le fichier avec les anciennes et nvelles
+                # clés.
+                with open(file_network, "w") as file:
+                    json.dump(data, file, indent=4)
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen02_play_or_run_save.py",
+                                               "method: def play_new_game()")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen02_play_or_run_save.py",
+                                               "class: Screen02PlayOrRunSave")
+
+                # Aller au prochain ecran.
+                self.root.destroy()
+                new_root = tk.Tk()
+                import screen04_create_character
+                screen04_create_character.Screen04CreateCharacter(new_root)
+                new_root.mainloop()
+
+            else:
+                logger.error(f"Le fichier {file_network} n'existe pas.")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen02_play_or_run_save.py",
+                                               "method: def play_new_game()")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen02_play_or_run_save",
+                                               "class: Screen02PlayOrRunSave")
+
+                sys.exit()
+
+        else:
+            logger.error(
+                f"Le fichier {file_network} n'est pas inscriptible")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen02_play_or_run_save",
+                                           "method: def play_new_game()")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen02_play_or_run_save.py",
+                                           "class: Screen02PlayOrRunSave")
+
+            sys.exit()
+
+        # ---------------------------------------------------------------------
 
     # ========================================================================
 
@@ -150,21 +233,101 @@ class Screen02PlayOrRunSave:
 
         logger.info("player wants to run a save")
 
-        self.root.destroy()
-        new_root = tk.Tk()
-        import screen03_choose_save
-        screen03_choose_save.Screen03ChooseSave(new_root)
-        new_root.mainloop()
+        # --------------------------------------------------------------------
+        # Ecrire la clé qui contient le type de partie (new game or save)
+        # ds le fichier "settings.json".
+        # Verifier que le fichier settings.json existe.
+        logger.info(f"Vérificat° du fichier {self.settings_file}")
+        file_network = self.settings_file
+        file_writable = True
+        if file_network:
+            logger.info(f"Le fichier {file_network} existe")
+            file_writable = os.access(file_network, os.W_OK)
+        else:
+            logger.info(f"Le fichier {file_network} n'existe pas")
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen02_play_or_run_save.py",
+                                           "method: def run_save()")
 
-        Utilitaires01.log_exit_message(logger,
-                                       "debug",
-                                       "screen02_play_or_run_save.py",
-                                       "method: def run_save()")
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen02_play_or_run_save.py",
+                                           "class: Screen02PlayOrRunSave")
 
-        Utilitaires01.log_exit_message(logger,
-                                       "debug",
-                                       "screen02_play_or_run_save.py",
-                                       "class: Screen02PlayOrRunSave")
+            sys.exit()
+
+        # Si le fichier settings.json existe ET s'il est accessible
+        # en ecriture alors:
+        # Ajouter en fin de fichier la valeur qui défini si
+        # l'utilisateur démarre une nvelle partie ou 1 partie sauvegardée.
+        if file_network and file_writable:
+            logger.info(f"Le fichier {file_network} est inscriptible")
+            logger.info("Ecriture du type de partie (new game or save)")
+
+            # Vérifier si le fichier existe
+            if os.path.exists(file_network):
+                # Charger les données existantes
+                with open(file_network, 'r') as f:
+                    data = json.load(f)
+
+                # Ajouter la nouvelle paire clé => valeur
+                new_key = "type_game"
+                new_value = "saved_game"
+                data[new_key] = new_value
+
+                # Réecrire le fichier avec les anciennes et nvelles
+                # clés.
+                with open(file_network, "w") as file:
+                    json.dump(data, file, indent=4)
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen02_play_or_run_save.py",
+                                               "method: def run_save()")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen02_play_or_run_save.py",
+                                               "class: Screen02PlayOrRunSave")
+
+                # Aller au prochain ecran.
+                self.root.destroy()
+                new_root = tk.Tk()
+                import screen04_create_character
+                screen04_create_character.Screen04CreateCharacter(new_root)
+                new_root.mainloop()
+
+            else:
+                logger.error(f"Le fichier {file_network} n'existe pas.")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen02_play_or_run_save.py",
+                                               "method: def run_save()")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen02_play_or_run_save",
+                                               "class: Screen02PlayOrRunSave")
+
+                sys.exit()
+
+        else:
+            logger.error(
+                f"Le fichier {file_network} n'est pas inscriptible")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen02_play_or_run_save",
+                                           "method: def run_save()")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen02_play_or_run_save.py",
+                                           "class: Screen02PlayOrRunSave")
+
+            sys.exit()
 
 
 if __name__ == "__main__":

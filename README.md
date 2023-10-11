@@ -26,5 +26,3 @@ Making A SRPG (Survival Role Playing Game).
 
 - Run first .py script  
   $ PYTHONPATH="/home/XXX/Documents/retest/SRPG/game" python3.11 /home/XXX/Documents/retest/SRPG/game/screen01_choose_mode.py  
-
-TEST

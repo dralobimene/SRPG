@@ -585,7 +585,19 @@ class Screen05GenerateMaps:
                 except IOError:
                     logger.info(
                         f"Le fichier {self.settings_file} n'est pas accessible en lecture.")
+
+                    Utilitaires01.log_exit_message(logger,
+                                                   "debug",
+                                                   "screen05_generate_maps.py",
+                                                   "method: def generate_json_from_txt()")
+
+                    Utilitaires01.log_exit_message(logger,
+                                                   "debug",
+                                                   "screen05_generate_maps.py",
+                                                   "class: Screen04CreateCharacter")
+
                     sys.exit()
+
                 else:
                     # Fichier accessible en lecture, aller de l'avant pour lire la clé
                     with open(self.settings_file, 'r') as f:

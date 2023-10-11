@@ -6,10 +6,14 @@ import secrets
 import os
 import re
 import sys
-import time
 import json
+import ipaddress
+
+from typing import Union
 
 from classes.utilitaires.utilitaires_01 import Utilitaires01
+from client import WebSocketClient
+
 
 from logger_config import configure_logger
 # méthodes du logger (debug(), info(), warning(), error(), critical())
@@ -45,6 +49,10 @@ class Screen04CreateCharacter:
         self.window_width = None
         self.window_height = None
 
+        # Récupèrera la valeur de la clé "mode" du fichier
+        # settings.json
+        self.mode = None
+
         # ---------------------------------------------------------------------
 
         # Vérifier si le fichier existe
@@ -73,12 +81,17 @@ class Screen04CreateCharacter:
             logger.info(
                 f"Le fichier {self.settings_file} est accessible en lecture.")
 
+            # Définir si le mode de jeu est monoplayer ou multiplayer.
+            self.mode = Utilitaires01.get_key_value_from_json(
+                self.settings_file, "mode")
+
             # Définir les dimensions de la fenêtre grâce aux valeurs adéquates
             # du fichier settings.json.
             self.window_width = Utilitaires01.get_key_value_from_json(
                 self.settings_file, "width_window")
             self.window_height = Utilitaires01.get_key_value_from_json(
                 self.settings_file, "height_window")
+
         else:
             logger.error(
                 f"Le fichier {self.settings_file} n'est pas accessible en lecture.")
@@ -169,26 +182,23 @@ class Screen04CreateCharacter:
         self.label_defense_value.grid(row=9, column=2, padx=15, sticky='w')
 
         # Boutons cachés
-        self.start_monoplayer_game = tk.Button(
+        self.btn_start_monoplayer_game = tk.Button(
             self.frame, text="Start monoplayer game.", command=self.monoplayer_game, width=20, height=2)
-        self.start_monoplayer_game.grid(row=10, column=1, padx=15, sticky="w")
-        self.start_monoplayer_game.grid_remove()
+        self.btn_start_monoplayer_game.grid(
+            row=10, column=1, padx=15, sticky="w")
+        self.btn_start_monoplayer_game.grid_remove()
 
-        self.set_network_settings = tk.Button(
-            self.frame, text="Set network settings.", command=self.set_network_settings, width=20, height=2)
-        self.set_network_settings.grid(row=10, column=1, padx=15, sticky="w")
-        self.set_network_settings.grid_remove()
+        self.btn_start_multiplayer_game = tk.Button(
+            self.frame, text="Start multiplayer game.", command=self.multiplayer_game, width=20, height=2)
+        self.btn_start_multiplayer_game.grid(
+            row=10, column=1, padx=15, sticky="w")
+        self.btn_start_multiplayer_game.grid_remove()
 
         # ========================================================================
         # la GUI pr parametrer le network.
 
         # la variable pr renseigner l'IP du serveur
-        self.ip_address = tk.StringVar()
-
-        # Les variables pr créer ensuite les widgets.
-        self.label_ip_address = None
-        self.entry_ip_address = None
-        self.connect_button = None
+        # self.ip_address = tk.StringVar()
 
         # ========================================================================
         # Appels de méthodes.
@@ -260,9 +270,21 @@ class Screen04CreateCharacter:
                     with open(self.settings_file, 'r') as f:
                         pass
                 except IOError:
-                    logger.info(
+                    logger.error(
                         f"Le fichier {self.settings_file} n'est pas accessible en lecture.")
+
+                    Utilitaires01.log_exit_message(logger,
+                                                   "debug",
+                                                   "screen04_create_character.py",
+                                                   "method: def update_ui()")
+
+                    Utilitaires01.log_exit_message(logger,
+                                                   "debug",
+                                                   "screen04_create_character.py",
+                                                   "class: Screen04CreateCharacter")
+
                     sys.exit()
+
                 else:
                     # Fichier accessible en lecture, aller de l'avant pour lire la clé
                     with open(self.settings_file, 'r') as f:
@@ -271,12 +293,24 @@ class Screen04CreateCharacter:
                         logger.info(
                             f"La valeur de la clé 'mode' est : {mode_value}")
             else:
-                logger.info(f"Le fichier {self.settings_file} n'existe pas.")
+                logger.error(f"Le fichier {self.settings_file} n'existe pas.")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen04_create_character.py",
+                                               "method: def update_ui()")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen04_create_character.py",
+                                               "class: Screen04CreateCharacter")
+
+                exit()
 
             if mode_value == "monoplayer":
-                self.start_monoplayer_game.grid()
+                self.btn_start_monoplayer_game.grid()
             elif mode_value == "multiplayer":
-                self.set_network_settings.grid()
+                self.btn_start_multiplayer_game.grid()
             else:
                 logger.error("Problem 01:")
                 logger.error("Fichier: game/screen04_create_character.py")
@@ -285,8 +319,8 @@ class Screen04CreateCharacter:
                 os.remove(self.settings_file)
                 sys.exit()
         else:
-            self.start_monoplayer_game.grid_remove()
-            self.set_network_settings.grid_remove()
+            self.btn_start_monoplayer_game.grid_remove()
+            self.btn_start_multiplayer_game.grid_remove()
 
         Utilitaires01.log_exit_message(logger,
                                        "debug",
@@ -354,25 +388,13 @@ class Screen04CreateCharacter:
 
     # ========================================================================
 
-    def set_network_settings(self):
+    def multiplayer_game(self):
         Utilitaires01.log_entry_message(logger,
                                         "debug",
                                         "screen04_create_character.py",
-                                        "method: def set_network_settings()")
+                                        "method: def multiplayer_game()")
 
-        logger.info("Player wants to set network settings.")
-        logger.info("We need to set GUI and settings.")
-
-        # Création du Label pour l'adresse IP
-        self.label_ip_address = tk.Label(
-            self.frame, text="Please enter Server IP address:")
-        self.label_ip_address.grid(
-            row=11, column=1, padx=15, pady=15, sticky='w')
-
-        # Création du champ de saisie pour l'adresse IP
-        self.entry_ip_address = tk.Entry(
-            self.frame, textvariable=self.ip_address)
-        self.entry_ip_address.grid(row=12, column=1, padx=15, sticky='w')
+        logger.info("Player starts the multiplayer game mode.")
 
         # Création du bouton Connect
         self.connect_button = tk.Button(
@@ -382,7 +404,7 @@ class Screen04CreateCharacter:
         Utilitaires01.log_exit_message(logger,
                                        "debug",
                                        "screen04_create_character.py",
-                                       "method: def set_network_settings()")
+                                       "method: def multiplayer_game()")
 
     # ========================================================================
 
@@ -416,15 +438,151 @@ class Screen04CreateCharacter:
                                         "screen04_create_character.py",
                                         "method: def connect_to_server()")
 
-        # Validation de l'adresse IP
-        ip_pattern = r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$"
+        # ---------------------------------------------------------------------
 
-        if not re.match(ip_pattern, self.ip_address.get()):
-            tkinter.messagebox.showerror("Erreur", "Adresse IP invalide")
-            return
+        # Condit°: en fonct° du mode du moteur de jeu:
+        # monoplayer ou multiplayer, instantie le fichier client.py.
+        if self.mode == "multiplayer":
+            logger.info("Le moteur de jeu est en mode multiplayer.")
 
-        #
-        self.actual_connect()
+            # Instantiation du client avec l'adresse du serveur.
+            self.websocket_client = WebSocketClient('192.168.1.210')
+
+            # Connexion au serveur.
+            self.websocket_client.connect()
+
+            # Récupérer l'adresse IP locale de la machine cliente.
+            client_ip = self.websocket_client.get_local_ip_address()
+
+            result1 = self.websocket_client.receive()
+
+            # Reçu sur la machine cliente.
+            # La variable result1 est définie sur le serveur.
+            print("Depuis le fichier: screen04_create_character.py: ")
+            print("qui transmet la variable définie sur le serveur.")
+            print(f"'{result1}'")
+
+        elif self.mode == "monoplayer":
+            logger.error("Le moteur de jeu est en mode monoplayer.")
+            logger.error("Alors que l'utilisateur a lancé un multiplayer.")
+        else:
+            logger.error("Une erreur est survenue à la lecture du")
+            logger.error(f"fichier {self.settings_file} sur la clé")
+            logger.error("'mode'.")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen04_create_character.py",
+                                           "method: def connect_to_server()")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen04_create_character.py",
+                                           "class: Screen04CreateCharacter")
+
+            sys.exit()
+
+        # ---------------------------------------------------------------------
+
+        # Ecrire la clé qui contient l'adresse IP du client
+        # ds le fichier "settings.json".
+        # Verifier que le fichier settings.json existe.
+        logger.info(f"Vérificat° du fichier {self.settings_file}")
+        file_network = self.settings_file
+        file_writable = True
+        if file_network:
+            logger.info(f"Le fichier {file_network} existe")
+            file_writable = os.access(file_network, os.W_OK)
+        else:
+            logger.info(f"Le fichier {file_network} n'existe pas")
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen04_create_character.py",
+                                           "method: def connect_to_server()")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen04_create_character.py",
+                                           "class: Screen04CreateCharacter")
+
+            sys.exit()
+
+        # Si le fichier settings.json existe ET s'il est accessible
+        # en ecriture alors:
+        # Ajouter en fin de fichier la valeur de client_ip.
+        if file_network and file_writable:
+            actual_ip = client_ip
+            ip_type = self.check_ip_type(actual_ip)
+
+            logger.info(f"Le fichier {file_network} est inscriptible")
+            logger.info(f"Définition Type de l'IP (IP4 ou IP6): : {ip_type}")
+            logger.info(f"Ecriture de l'IP: {str(actual_ip)}")
+
+            # Vérifier si le fichier existe
+            if os.path.exists(file_network):
+                # Charger les données existantes
+                with open(file_network, 'r') as f:
+                    data = json.load(f)
+
+                # Ajouter la nouvelle paire clé => valeur
+                new_key = "IP_user_adress"
+                new_value = actual_ip
+                data[new_key] = new_value
+
+                # Réecrire le fichier avec les anciennes et nvelles
+                # clés.
+                with open(file_network, "w") as file:
+                    json.dump(data, file, indent=4)
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen04_create_character.py",
+                                               "method: def connect_to_server()")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen04_create_character.py",
+                                               "class: Screen04CreateCharacter")
+
+                # Aller au prochain ecran.
+                self.root.destroy()
+                import screen05_generate_maps
+                new_root = tk.Tk()
+                screen05_generate_maps.Screen05GenerateMaps(new_root)
+                new_root.mainloop()
+
+            else:
+                logger.error(f"Le fichier {file_network} n'existe pas.")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen04_create_character.py",
+                                               "method: def connect_to_server()")
+
+                Utilitaires01.log_exit_message(logger,
+                                               "debug",
+                                               "screen04_create_character.py",
+                                               "class: Screen04CreateCharacter")
+
+                sys.exit()
+
+        else:
+            logger.error(
+                f"Le fichier {file_network} n'est pas inscriptible")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen04_create_character.py",
+                                           "method: def connect_to_server()")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen04_create_character.py",
+                                           "class: Screen04CreateCharacter")
+
+            sys.exit()
+
+        # ---------------------------------------------------------------------
 
         Utilitaires01.log_exit_message(logger,
                                        "debug",
@@ -438,113 +596,15 @@ class Screen04CreateCharacter:
 
     # ========================================================================
 
-    def actual_connect(self):
-        Utilitaires01.log_entry_message(logger,
-                                        "debug",
-                                        "screen04_create_character.py",
-                                        "method: def actual_connect()")
-
-        # Ici, vous ajoutez votre code pour établir la connexion.
-        # Pour l'instant, utilisons un sleep pour simuler un délai.
-        # Simule le temps pris pour la connexion
-        time.sleep(2)
-
-        # Ici, ajoutez le code pour vérifier si le serveur répond.
-        # Mettez ceci à False si le serveur ne répond pas
-        server_responds = True
-
-        if server_responds:
-            logger.info("Connection to server is running...")
-
-            tkinter.messagebox.showinfo("Succès", "Connexion réussie")
-
-            # Verifier que le fichier settings.json existe.
-            logger.info(f"Vérificat° du fichier {self.settings_file}")
-            file_network = self.settings_file
-            file_writable = False
-            if file_network:
-                logger.info(f"Le fichier {file_network} existe")
-                file_writable = os.access(file_network, os.W_OK)
-            else:
-                logger.info(f"Le fichier {file_network} n'existe pas")
-                Utilitaires01.log_exit_message(logger,
-                                               "debug",
-                                               "screen04_create_character.py",
-                                               "method: def actual_connect()")
-
-                Utilitaires01.log_exit_message(logger,
-                                               "debug",
-                                               "screen04_create_character.py",
-                                               "class: Screen04CreateCharacter")
-
-                sys.exit()
-
-            # Si le fichier settings.json existe ET s'il est accessible
-            # en ecriture alors:
-            # Ajouter en fin de fichier la valeur de self.ip_address.
-            if file_network and file_writable:
-                actual_ip = self.ip_address.get()
-                logger.info(f"Le fichier {file_network} est inscriptible")
-                logger.info(f"Ecriture de l'IP: {str(actual_ip)}")
-
-                # Vérifier si le fichier existe
-                if os.path.exists(file_network):
-                    # Charger les données existantes
-                    with open(file_network, 'r') as f:
-                        data = json.load(f)
-
-                    # Ajouter la nouvelle paire clé => valeur
-                    new_key = "IP_user_adress"
-                    new_value = actual_ip
-                    data[new_key] = new_value
-
-                    # Réecrire le fichier avec les anciennes et nvelles
-                    # clés.
-                    with open(file_network, "w") as file:
-                        json.dump(data, file, indent=4)
-                else:
-                    print(f"Le fichier {file_network} n'existe pas.")
-            else:
-                logger.info(
-                    f"Le fichier {file_network} n'est pas inscriptible")
-
-                Utilitaires01.log_exit_message(logger,
-                                               "debug",
-                                               "screen04_create_character.py",
-                                               "method: def actual_connect()")
-
-                Utilitaires01.log_exit_message(logger,
-                                               "debug",
-                                               "screen04_create_character.py",
-                                               "class: Screen04CreateCharacter")
-
-                sys.exit()
-
-            self.root.destroy()
-            import screen05_generate_maps
-            new_root = tk.Tk()
-            screen05_generate_maps.Screen05GenerateMaps(new_root)
-            new_root.mainloop()
-
-            Utilitaires01.log_exit_message(logger,
-                                           "debug",
-                                           "screen04_create_character.py",
-                                           "method: def actual_connect")
-
-        else:
-            logger.info("Connection failed...")
-
-            tkinter.messagebox.showinfo("Échec", "Connexion échouée")
-            self.root.destroy()
-            import screen01_choose_mode
-            new_root = tk.Tk()
-            screen01_choose_mode.Screen01ChooseMode(new_root)
-            new_root.mainloop()
-
-            Utilitaires01.log_exit_message(logger,
-                                           "debug",
-                                           "screen04_create_character.py",
-                                           "method: def actual_connect()")
+    def check_ip_type(self, ip_str: str) -> Union[str, None]:
+        try:
+            ip = ipaddress.ip_address(ip_str)
+            if isinstance(ip, ipaddress.IPv4Address):
+                return 'IPv4'
+            elif isinstance(ip, ipaddress.IPv6Address):
+                return 'IPv6'
+        except ValueError:
+            return None
 
 
 if __name__ == "__main__":

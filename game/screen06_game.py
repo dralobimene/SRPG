@@ -5,11 +5,15 @@ import pygame_gui
 import sys
 import os
 
+from client import WebSocketClient
+
 from classes.utilitaires.utilitaires_01 import Utilitaires01
 
 from logger_config import configure_logger
 # méthodes du logger (debug(), info(), warning(), error(), critical())
 logger = configure_logger(__name__, 'logs/screen06_game.log')
+
+SOME_EVENT_TYPE = pygame.USEREVENT + 1
 
 
 class Screen06Game:
@@ -32,6 +36,12 @@ class Screen06Game:
         # Initialise tous les modules importés de Pygame.
         pygame.init()
 
+        # Permettra l'instantiat° du client.
+        self.websocket_client = None
+
+        # Permettra ...
+        result1 = None
+
         # Définit le titre de la fenêtre.
         pygame.display.set_caption('game/screen06_game.py')
 
@@ -39,16 +49,20 @@ class Screen06Game:
         # settings
         self.settings_file = "settings.json"
 
-        # Définira les dimensios° de la fenetre.
+        # Définira les dimens° de la fenetre.
         self.window_width = None
         self.window_height = None
 
         # Définira les dimensions des tiles.
         self.tile_size = None
 
+        # Récupèrera la valeur de la clé "mode" du fichier
+        # settings.json
+        self.mode = None
+
         # ---------------------------------------------------------------------
 
-        # Vérifier si le fichier existe
+        # Vérifie si le fichier "settings.json" existe.
         if os.path.exists(self.settings_file):
             logger.info(f"Le fichier {self.settings_file} existe.")
         else:
@@ -73,6 +87,11 @@ class Screen06Game:
         if os.access(self.settings_file, os.R_OK):
             logger.info(
                 f"Le fichier {self.settings_file} est accessible en lecture.")
+
+            # Définir si le moteur de jeu est en mode
+            # monoplayer ou multiplayer
+            self.mode = Utilitaires01.get_key_value_from_json(
+                self.settings_file, "mode")
 
             # Définir les dimensions de la fenêtre grâce aux valeurs adéquates
             # du fichier settings.json.
@@ -106,6 +125,48 @@ class Screen06Game:
         self.screen = pygame.display.set_mode((self.window_width,
                                                self.window_height))
 
+        # ---------------------------------------------------------------------
+
+        # Condit°: en fonct° du mode du moteur de jeu:
+        # monoplayer ou multiplayer, instantie le fichier client.py.
+        if self.mode == "multiplayer":
+            logger.info("Le moteur de jeu est en mode multiplayer.")
+
+            # Instantiation du client avec l'adresse du serveur.
+            self.websocket_client = WebSocketClient('192.168.1.210')
+
+            # Connexion au serveur.
+            self.websocket_client.connect()
+
+            result1 = self.websocket_client.receive()
+
+            # Reçu sur la machine cliente.
+            # La variable result1 est définie sur le serveur.
+            print("Depuis le fichier: screen06_game.py: ")
+            print("qui transmet la variable définie sur le serveur.")
+            print(f"'{result1}'")
+
+        elif self.mode == "monoplayer":
+            logger.info("Le moteur de jeu est en mode monoplayer.")
+        else:
+            logger.error("Une erreur est survenue à la lecture du")
+            logger.error(f"fichier {self.settings_file} sur la clé")
+            logger.error("'mode'.")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen06_game.py",
+                                           "method: def __init__()")
+
+            Utilitaires01.log_exit_message(logger,
+                                           "debug",
+                                           "screen06_game.py",
+                                           "class: Screen06Game")
+
+            sys.exit()
+
+        # ---------------------------------------------------------------------
+
         # La fonction pygame.time.get_ticks() renvoie le nombre de
         # millisecondes écoulées depuis l'initialisation de Pygame.
         # Cette valeur est souvent utilisée pour contrôler le comportement du
@@ -123,7 +184,7 @@ class Screen06Game:
 
         Utilitaires01.log_exit_message(logger,
                                        "debug",
-                                       "screen01_choose_mode.py",
+                                       "screen06_game.py",
                                        "method: def __init__()")
 
     # ========================================================================
@@ -138,7 +199,7 @@ class Screen06Game:
             if event.type == pygame.QUIT:
                 Utilitaires01.log_exit_message(logger,
                                                "debug",
-                                               "screen01_choose_mode.py",
+                                               "screen06_game.py",
                                                "method: def handle_events()")
 
                 Utilitaires01.log_exit_message(logger,
@@ -149,9 +210,12 @@ class Screen06Game:
                 pygame.quit()
                 exit()
 
+            if event.type == SOME_EVENT_TYPE:
+                self.q.put("some_command")
+
         Utilitaires01.log_exit_message(logger,
                                        "debug",
-                                       "screen01_choose_mode.py",
+                                       "screen06_game.py",
                                        "method: def handle_events()")
 
     # ========================================================================
@@ -170,7 +234,7 @@ class Screen06Game:
 
         Utilitaires01.log_exit_message(logger,
                                        "debug",
-                                       "screen01_choose_mode.py",
+                                       "screen06_game.py",
                                        "method: def update()")
 
     # ========================================================================
@@ -183,7 +247,7 @@ class Screen06Game:
 
         Utilitaires01.log_exit_message(logger,
                                        "debug",
-                                       "screen01_choose_mode.py",
+                                       "screen06_game.py",
                                        "method: def render()")
 
     # ========================================================================
