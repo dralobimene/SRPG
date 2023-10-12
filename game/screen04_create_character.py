@@ -203,6 +203,8 @@ class Screen04CreateCharacter:
         # ========================================================================
         # Appels de méthodes.
 
+        # Verifie si a chaque release de touche le pattern
+        # est respecté.
         self.entry_name.bind('<KeyRelease>', self.is_character_valid)
 
         self.read_temp_settings_file()
@@ -414,12 +416,6 @@ class Screen04CreateCharacter:
                                         "screen04_create_character.py",
                                         "method: def open_new_window_to_generate_maps()")
 
-        import screen05_generate_maps
-        self.root.destroy()
-        new_root = tk.Tk()
-        screen05_generate_maps.Screen05GenerateMaps(new_root)
-        new_root.mainloop()
-
         Utilitaires01.log_exit_message(logger,
                                        "debug",
                                        "screen04_create_character.py",
@@ -430,7 +426,13 @@ class Screen04CreateCharacter:
                                        "screen04_create_character.py",
                                        "class: Screen04CreateCharacter")
 
-    # ========================================================================
+        import screen05_generate_maps
+        self.root.destroy()
+        new_root = tk.Tk()
+        screen05_generate_maps.Screen05GenerateMaps(new_root)
+        new_root.mainloop()
+
+# ========================================================================
 
     def connect_to_server(self):
         Utilitaires01.log_entry_message(logger,

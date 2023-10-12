@@ -5,18 +5,25 @@ import pygame_gui
 import sys
 import os
 
-from client import WebSocketClient
+from queue import Queue
+from threading import Thread
 
+from client import WebSocketClient
 from classes.utilitaires.utilitaires_01 import Utilitaires01
+from classes.utilitaires.utilitaires_02_reseau import Utilitaires02Reseau
 
 from logger_config import configure_logger
 # méthodes du logger (debug(), info(), warning(), error(), critical())
 logger = configure_logger(__name__, 'logs/screen06_game.log')
 
-SOME_EVENT_TYPE = pygame.USEREVENT + 1
-
 
 class Screen06Game:
+
+    # constantes:
+    # SOME_EVENT_TYPE = pygame.USEREVENT + 1
+    # ACCEDER à la constante: Screen06Game.SOME_EVENT_TYPE
+    # Utilisat°: constante partagée entre toutes les instances de la classe.
+
     Utilitaires01.log_entry_message(logger,
                                     "debug",
                                     "screen06_game.py",
@@ -28,6 +35,11 @@ class Screen06Game:
     print("")
 
     def __init__(self):
+        # self.SOME_EVENT_TYPE = pygame.USEREVENT + 1
+        # ACCEDER à la variable: self.SOME_EVENT_TYPE = pygame.USEREVENT + 1
+        # Utilisat°: chaque instance de la classe doit avoir sa
+        #       propre valeur pour cette variable.
+
         Utilitaires01.log_entry_message(logger,
                                         "debug",
                                         "screen06_game.py",
@@ -39,7 +51,11 @@ class Screen06Game:
         # Permettra l'instantiat° du client.
         self.websocket_client = None
 
-        # Permettra ...
+        # Définira un élément de type Queue pour les
+        # messages.
+        self.file_messages = None
+
+        # Recevra la valeur envoyée par le serveur.
         result1 = None
 
         # Définit le titre de la fenêtre.
@@ -50,14 +66,16 @@ class Screen06Game:
         self.settings_file = "settings.json"
 
         # Définira les dimens° de la fenetre.
+        # Définies ds le fichier settings.json.
         self.window_width = None
         self.window_height = None
 
         # Définira les dimensions des tiles.
+        # Définies ds le fichier "settings.json".
         self.tile_size = None
 
         # Récupèrera la valeur de la clé "mode" du fichier
-        # settings.json
+        # settings.json. Le mode est "monoplayer" ou "multiplayer".
         self.mode = None
 
         # ---------------------------------------------------------------------
@@ -138,13 +156,26 @@ class Screen06Game:
             # Connexion au serveur.
             self.websocket_client.connect()
 
-            result1 = self.websocket_client.receive()
+            # Défini la variable en tant qu'objet de type Queue.
+            self.file_messages = Queue()
+
+            # Reçoit la valeur envoyée par le serveur.
+            self.result1 = self.websocket_client.receive()
 
             # Reçu sur la machine cliente.
-            # La variable result1 est définie sur le serveur.
+            # La variable result1 est la valeur du message
+            # défini sur le serveur.
             print("Depuis le fichier: screen06_game.py: ")
             print("qui transmet la variable définie sur le serveur.")
-            print(f"'{result1}'")
+            print(f"{self.result1}")
+
+            #
+            Thread(target=self.websocket_client.listen).start()
+
+            # Envoyer un message au démarrage de l'appli
+            Utilitaires02Reseau.send_message(
+                self.websocket_client,
+                "Bonjour, je suis la machine cliente1.")
 
         elif self.mode == "monoplayer":
             logger.info("Le moteur de jeu est en mode monoplayer.")
@@ -197,6 +228,16 @@ class Screen06Game:
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+
+                logger.info("event: pygame.QUIT")
+                logger.info("Close window, and program.")
+                if self.websocket_client:
+                    logger.info("mulitplayer mode, closing websocket.")
+                    self.websocket_client.close()
+
+                pygame.quit()
+                sys.exit()
+
                 Utilitaires01.log_exit_message(logger,
                                                "debug",
                                                "screen06_game.py",
@@ -210,8 +251,16 @@ class Screen06Game:
                 pygame.quit()
                 exit()
 
-            if event.type == SOME_EVENT_TYPE:
-                self.q.put("some_command")
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_s:
+                    # Insére le message dans la file_messages.
+                    # Il faut le traiter puis ensuite l'envoyer via
+                    # send.message() (avec utilisat° de variables evidemment).
+                    self.file_messages.put(
+                        "Je suis la machine cliente1 et je salue")
+                    Utilitaires02Reseau.send_message(
+                        self.websocket_client,
+                        "Je suis la machine cliente1 et je salue")
 
         Utilitaires01.log_exit_message(logger,
                                        "debug",
@@ -265,6 +314,15 @@ class Screen06Game:
             self.handle_events()
             self.update(time_delta)
             self.render()
+
+            # On peut aussi envoyer un message ici.
+            # avec une condit° qui est vérifiée à chaque tour de boucle.
+            # Ou on peut le faire depuis les méthodes update() & render().
+            # if SOME_CONDITION:
+            #     self.send_message(
+            #           self.websocket_client,
+            #           "Bonjour, je suis la machine cliente1.")
+
             pygame.display.update()
 
         Utilitaires01.log_exit_message(logger,

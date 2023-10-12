@@ -1,0 +1,77 @@
+2023-10-12 18:12:37,395 - client - DEBUG - ========================================================
+2023-10-12 18:12:37,395 - client - DEBUG - File: client.py
+2023-10-12 18:12:37,395 - client - DEBUG - >>> class: WebSocketClient
+2023-10-12 18:12:41,053 - client - DEBUG - ========================================================
+2023-10-12 18:12:41,053 - client - DEBUG - File: client.py
+2023-10-12 18:12:41,053 - client - DEBUG - >>> methode: def __init__()
+2023-10-12 18:12:41,053 - client - DEBUG - 
+2023-10-12 18:12:41,053 - client - DEBUG - File: client.py
+2023-10-12 18:12:41,054 - client - DEBUG - Fin de la methode: def __init__() <<<
+2023-10-12 18:12:41,054 - client - DEBUG - ========================================================
+2023-10-12 18:12:41,054 - client - DEBUG - ========================================================
+2023-10-12 18:12:41,054 - client - DEBUG - File: client.py
+2023-10-12 18:12:41,054 - client - DEBUG - >>> methode: def connect()
+2023-10-12 18:12:41,286 - client - DEBUG - ========================================================
+2023-10-12 18:12:41,286 - client - DEBUG - File: client.py
+2023-10-12 18:12:41,286 - client - DEBUG - >>> methode: def get_local_ip_address()
+2023-10-12 18:12:41,287 - client - DEBUG - ========================================================
+2023-10-12 18:12:41,287 - client - DEBUG - File: client.py
+2023-10-12 18:12:41,287 - client - DEBUG - >>> methode: def get_local_ip_address()
+2023-10-12 18:12:41,287 - client - DEBUG - ========================================================
+2023-10-12 18:12:41,287 - client - DEBUG - File: client.py
+2023-10-12 18:12:41,287 - client - DEBUG - >>> methode: def receive()
+2023-10-12 18:12:45,447 - client - DEBUG - ========================================================
+2023-10-12 18:12:45,447 - client - DEBUG - File: client.py
+2023-10-12 18:12:45,447 - client - DEBUG - >>> methode: def __init__()
+2023-10-12 18:12:45,447 - client - DEBUG - 
+2023-10-12 18:12:45,448 - client - DEBUG - File: client.py
+2023-10-12 18:12:45,448 - client - DEBUG - Fin de la methode: def __init__() <<<
+2023-10-12 18:12:45,448 - client - DEBUG - ========================================================
+2023-10-12 18:12:45,448 - client - DEBUG - ========================================================
+2023-10-12 18:12:45,448 - client - DEBUG - File: client.py
+2023-10-12 18:12:45,448 - client - DEBUG - >>> methode: def connect()
+2023-10-12 18:12:45,908 - client - DEBUG - ========================================================
+2023-10-12 18:12:45,909 - client - DEBUG - File: client.py
+2023-10-12 18:12:45,909 - client - DEBUG - >>> methode: def get_local_ip_address()
+2023-10-12 18:12:45,909 - client - DEBUG - ========================================================
+2023-10-12 18:12:45,909 - client - DEBUG - File: client.py
+2023-10-12 18:12:45,909 - client - DEBUG - >>> methode: def receive()
+2023-10-12 18:12:45,915 - client - DEBUG - ========================================================
+2023-10-12 18:12:45,915 - client - DEBUG - File: client.py
+2023-10-12 18:12:45,916 - client - DEBUG - >>> methode: def listen()
+2023-10-12 18:12:45,922 - client - INFO - File:client.py
+2023-10-12 18:12:45,923 - client - INFO - Méthode: listen()
+2023-10-12 18:12:45,927 - client - INFO - Message reçu : Salut, je suis le sieur serveur.
+2023-10-12 18:12:48,651 - client - INFO - File:client.py
+2023-10-12 18:12:48,652 - client - INFO - Méthode: listen()
+2023-10-12 18:12:48,652 - client - INFO - Message reçu : Salut, je suis le sieur serveur.
+2023-10-12 18:12:52,587 - client - INFO - File:client.py
+2023-10-12 18:12:52,587 - client - INFO - Méthode: listen()
+2023-10-12 18:12:52,587 - client - INFO - Message reçu : Salut, je suis le sieur serveur.
+2023-10-12 18:12:54,555 - client - INFO - File:client.py
+2023-10-12 18:12:54,555 - client - INFO - Méthode: listen()
+2023-10-12 18:12:54,555 - client - INFO - Message reçu : Salut, je suis le sieur serveur.
+2023-10-12 18:13:18,046 - client - INFO - File:client.py
+2023-10-12 18:13:18,046 - client - INFO - Méthode: listen()
+2023-10-12 18:13:18,046 - client - INFO - Message reçu : Salut, je suis le sieur serveur.
+2023-10-12 18:13:31,660 - client - INFO - File:client.py
+2023-10-12 18:13:31,660 - client - INFO - Méthode: listen()
+2023-10-12 18:13:31,660 - client - INFO - Message reçu : Salut, je suis le sieur serveur.
+2023-10-12 18:13:31,807 - client - INFO - File:client.py
+2023-10-12 18:13:31,807 - client - INFO - Méthode: listen()
+2023-10-12 18:13:31,807 - client - INFO - Message reçu : Salut, je suis le sieur serveur.
+2023-10-12 18:13:32,793 - client - INFO - File:client.py
+2023-10-12 18:13:32,793 - client - INFO - Méthode: listen()
+2023-10-12 18:13:32,794 - client - INFO - Message reçu : Salut, je suis le sieur serveur.
+2023-10-12 18:13:42,907 - client - DEBUG - ========================================================
+2023-10-12 18:13:42,907 - client - DEBUG - File: client.py
+2023-10-12 18:13:42,907 - client - DEBUG - >>> methode: def close()
+2023-10-12 18:13:43,696 - client - INFO - File:client.py
+2023-10-12 18:13:43,696 - client - INFO - Méthode: listen()
+2023-10-12 18:13:43,696 - client - INFO - Message reçu : 
+2023-10-12 18:13:43,697 - client - WARNING - File: client.py
+2023-10-12 18:13:43,697 - client - WARNING - Méthode: listen()
+2023-10-12 18:13:43,697 - client - WARNING - La connexion WebSocket est fermée.
+2023-10-12 18:13:43,697 - client - DEBUG - ========================================================
+2023-10-12 18:13:43,698 - client - DEBUG - File: client.py
+2023-10-12 18:13:43,698 - client - DEBUG - >>> methode: def close()
