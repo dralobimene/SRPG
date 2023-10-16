@@ -1,32 +1,16 @@
-2023-10-12 18:12:45,915 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:12:45,915 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
-2023-10-12 18:12:45,915 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:12:45,915 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
-2023-10-12 18:12:48,552 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:12:48,553 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
-2023-10-12 18:12:48,553 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:12:48,553 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
-2023-10-12 18:12:52,342 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:12:52,342 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
-2023-10-12 18:12:52,342 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:12:52,342 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
-2023-10-12 18:12:54,273 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:12:54,273 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
-2023-10-12 18:12:54,273 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:12:54,273 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
-2023-10-12 18:13:17,753 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:13:17,754 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
-2023-10-12 18:13:17,755 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:13:17,755 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
-2023-10-12 18:13:31,190 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:13:31,190 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
-2023-10-12 18:13:31,191 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:13:31,192 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
-2023-10-12 18:13:31,803 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:13:31,803 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
-2023-10-12 18:13:31,803 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:13:31,803 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
-2023-10-12 18:13:32,348 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:13:32,348 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
-2023-10-12 18:13:32,348 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
-2023-10-12 18:13:32,348 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
+2023-10-16 10:35:32,052 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
+2023-10-16 10:35:32,052 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
+2023-10-16 10:35:32,053 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
+2023-10-16 10:35:32,053 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
+2023-10-16 10:35:51,480 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
+2023-10-16 10:35:51,480 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
+2023-10-16 10:35:51,480 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
+2023-10-16 10:35:51,480 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
+2023-10-16 10:37:44,190 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
+2023-10-16 10:37:44,190 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
+2023-10-16 10:37:44,190 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
+2023-10-16 10:37:44,190 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<
+2023-10-16 10:37:58,565 - classes.utilitaires.utilitaires_02_reseau - INFO - >>> Fichier classes/utilitaires/utilitaires_02_reseau.py
+2023-10-16 10:37:58,565 - classes.utilitaires.utilitaires_02_reseau - INFO - méthode: send_message()
+2023-10-16 10:37:58,566 - classes.utilitaires.utilitaires_02_reseau - INFO - Fichier classes/utilitaires/utilitaires_02_reseau.py
+2023-10-16 10:37:58,566 - classes.utilitaires.utilitaires_02_reseau - INFO - methode: send_message() <<<

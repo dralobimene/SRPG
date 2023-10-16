@@ -60,7 +60,7 @@ class Screen01ChooseMode:
             # Défini width et height pour les fenetres du programmme.
             self.json_dict = {
                 "width_window": 1200,
-                "height_window": 800,
+                "height_window": 700,
                 "tile_size": 10
             }
 

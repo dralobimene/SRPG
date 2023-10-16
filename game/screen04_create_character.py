@@ -448,7 +448,7 @@ class Screen04CreateCharacter:
             logger.info("Le moteur de jeu est en mode multiplayer.")
 
             # Instantiation du client avec l'adresse du serveur.
-            self.websocket_client = WebSocketClient('192.168.1.210')
+            self.websocket_client = WebSocketClient(self, '192.168.1.210')
 
             # Connexion au serveur.
             self.websocket_client.connect()

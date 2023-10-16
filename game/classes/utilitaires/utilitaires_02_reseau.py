@@ -21,8 +21,13 @@ class Utilitaires02Reseau:
         logger.info(">>> Fichier classes/utilitaires/utilitaires_02_reseau.py")
         logger.info("méthode: send_message()")
 
-        if websocket_client:
+        try:
+
             websocket_client.ws.send(message)
+
+        except Exception as e:
+
+            logger.error(f"Failed to send message: {e}")
 
         logger.info("Fichier classes/utilitaires/utilitaires_02_reseau.py")
         logger.info("methode: send_message() <<<")

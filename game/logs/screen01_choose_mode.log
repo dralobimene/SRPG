@@ -1,23 +1,23 @@
-2023-10-12 18:12:35,406 - __main__ - DEBUG - ========================================================
-2023-10-12 18:12:35,406 - __main__ - DEBUG - File: screen01_choose_mode.py
-2023-10-12 18:12:35,406 - __main__ - DEBUG - >>> class: Screen01ChooseMode
-2023-10-12 18:12:35,657 - __main__ - DEBUG - ========================================================
-2023-10-12 18:12:35,658 - __main__ - DEBUG - File: screen01_choose_mode.py
-2023-10-12 18:12:35,658 - __main__ - DEBUG - >>> method: def __init__()
-2023-10-12 18:12:35,658 - __main__ - INFO - Le fichier settings.json existe.
-2023-10-12 18:12:35,658 - __main__ - INFO - Le fichier settings.json est inscriptible
-2023-10-12 18:12:35,669 - __main__ - DEBUG - 
-2023-10-12 18:12:35,669 - __main__ - DEBUG - File: screen01_choose_mode.py
-2023-10-12 18:12:35,669 - __main__ - DEBUG - Fin de la method: def __init__() <<<
-2023-10-12 18:12:35,669 - __main__ - DEBUG - ========================================================
-2023-10-12 18:12:36,300 - __main__ - DEBUG - ========================================================
-2023-10-12 18:12:36,301 - __main__ - DEBUG - File: screen01_choose_mode.py
-2023-10-12 18:12:36,301 - __main__ - DEBUG - >>> method: def multiplayer_mode()
-2023-10-12 18:12:36,302 - __main__ - INFO - =======================================================
-2023-10-12 18:12:36,302 - __main__ - INFO - File: screen01_choose_mode.py
-2023-10-12 18:12:36,302 - __main__ - INFO - Méthode: monoplayer_mode()
-2023-10-12 18:12:36,302 - __main__ - INFO - 01: Le fichier settings.json a été créé avec succès.
-2023-10-12 18:12:36,302 - __main__ - INFO - 
-2023-10-12 18:12:36,302 - __main__ - DEBUG - ========================================================
-2023-10-12 18:12:36,302 - __main__ - DEBUG - File: screen01_choose_mode.py
-2023-10-12 18:12:36,302 - __main__ - DEBUG - >>> method: def open_new_window()
+2023-10-16 10:35:16,896 - __main__ - DEBUG - ========================================================
+2023-10-16 10:35:16,896 - __main__ - DEBUG - File: screen01_choose_mode.py
+2023-10-16 10:35:16,897 - __main__ - DEBUG - >>> class: Screen01ChooseMode
+2023-10-16 10:35:17,270 - __main__ - DEBUG - ========================================================
+2023-10-16 10:35:17,270 - __main__ - DEBUG - File: screen01_choose_mode.py
+2023-10-16 10:35:17,270 - __main__ - DEBUG - >>> method: def __init__()
+2023-10-16 10:35:17,270 - __main__ - INFO - Le fichier settings.json existe.
+2023-10-16 10:35:17,270 - __main__ - INFO - Le fichier settings.json est inscriptible
+2023-10-16 10:35:17,305 - __main__ - DEBUG - 
+2023-10-16 10:35:17,306 - __main__ - DEBUG - File: screen01_choose_mode.py
+2023-10-16 10:35:17,306 - __main__ - DEBUG - Fin de la method: def __init__() <<<
+2023-10-16 10:35:17,306 - __main__ - DEBUG - ========================================================
+2023-10-16 10:35:19,314 - __main__ - DEBUG - ========================================================
+2023-10-16 10:35:19,314 - __main__ - DEBUG - File: screen01_choose_mode.py
+2023-10-16 10:35:19,314 - __main__ - DEBUG - >>> method: def multiplayer_mode()
+2023-10-16 10:35:19,315 - __main__ - INFO - =======================================================
+2023-10-16 10:35:19,315 - __main__ - INFO - File: screen01_choose_mode.py
+2023-10-16 10:35:19,315 - __main__ - INFO - Méthode: monoplayer_mode()
+2023-10-16 10:35:19,315 - __main__ - INFO - 01: Le fichier settings.json a été créé avec succès.
+2023-10-16 10:35:19,315 - __main__ - INFO - 
+2023-10-16 10:35:19,315 - __main__ - DEBUG - ========================================================
+2023-10-16 10:35:19,315 - __main__ - DEBUG - File: screen01_choose_mode.py
+2023-10-16 10:35:19,315 - __main__ - DEBUG - >>> method: def open_new_window()

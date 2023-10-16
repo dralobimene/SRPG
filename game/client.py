@@ -1,8 +1,8 @@
 # client.py
 
-from datetime import datetime
 import socket
 
+from datetime import datetime
 from websocket import create_connection
 from websocket import WebSocketTimeoutException
 from websocket import WebSocketBadStatusException
@@ -27,7 +27,7 @@ class WebSocketClient:
                                     "client.py",
                                     "class: WebSocketClient")
 
-    def __init__(self, target):
+    def __init__(self, screen06_game, target):
         """
         Initialize the WebSocketClient.
 
@@ -39,10 +39,24 @@ class WebSocketClient:
                                         "client.py",
                                         "methode: def __init__()")
 
+        #
+        self.screen06_game = screen06_game
+
+        # Définira l'adresse IP du serveur à l'instantiat°
+        # de la classe ds le fichier screen06_game.py
         self.target = target
+
+        # Définira le websocket.
         self.ws = None
+
+        # Défini si le client est connecté.
         self.is_connected = False
+
+        # Défini si la connex° est ouverte.
         self.closed = False
+
+        # Défini son adresse IP.
+        self.ip_client = self.get_local_ip_address()
 
         Utilitaires01.log_exit_message(logger,
                                        "debug",
@@ -67,20 +81,32 @@ class WebSocketClient:
 
         if sock.fileno() == -1:
 
-            logger.error("File: client.py")
-            logger.error("methode: get_local_ip_address()")
+            Utilitaires01.log_exit_message(logger,
+                                           "error",
+                                           "client.py",
+                                           "method: def get_local_ip_address()")
+
             logger.error(
                 "Erreur 01 : le socket n'a pas été correctement initialisé.")
 
-            return '127.0.0.1'
-
         try:
+
             sock.connect((self.target, 1))
             IP = sock.getsockname()[0]
+
         except Exception:
-            IP = '127.0.0.1'
+
+            Utilitaires01.log_exit_message(logger,
+                                           "error",
+                                           "client.py",
+                                           "method: def get_local_ip_address()")
+
+            logger.error(" Sortie du programme.")
+            self.screen06_game.running = False
+
         finally:
             sock.close()
+
         return IP
 
     # ========================================================================
@@ -100,13 +126,39 @@ class WebSocketClient:
                                         "methode: def connect()")
 
         try:
+
+            # create_connection = methode qui fait partie du package
+            # websocket.
+            # Retourne 1 instance de la classe WebSocket (ici self.ws).
             self.ws = create_connection(f"ws://{self.target}:8888/websocket")
+
+            #
             self.is_connected = True
+
+            #
             client_ip = self.get_local_ip_address()
+
+            #
             current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            # Reçu sur le serveur.
-            self.ws.send(
-                f"Depuis le fichier client.py: {current_time}, adresse IP: {client_ip}")
+
+            message = f"""
+                        >=================================================
+                        client.py > screen06_game > serveur_tornado.py
+                        {current_time}, adresse IP: {client_ip}
+                        =================================================<
+                        """
+            self.ws.send(message)
+
+            # # Reçu sur le serveur.
+            # # Constitue 1 message.
+            # self.ws.send(">=================================================")
+            # # Constitue 1 message.
+            # self.ws.send("client.py > screen06_game > serveur_tornado.py")
+            # # Constitue 1 message.
+            # self.ws.send(f"{current_time}, adresse IP: {client_ip}")
+            # # Constitue 1 message.
+            # self.ws.send("=================================================<")
+
         except (WebSocketTimeoutException, WebSocketBadStatusException, WebSocketException) as e:
 
             logger.error("File: client.py")
