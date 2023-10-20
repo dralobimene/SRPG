@@ -17,6 +17,7 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
     # stocker le prochain ID disponible
     next_ws_id = 1
 
+    #
     next_message_id = 1  # stocker le prochain ID de message disponible
 
     def __init__(self, *args, **kwargs):
@@ -62,13 +63,21 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
         # Attribue un ID unique à ce message
         message_id = WebSocketHandler.next_message_id
 
+        # --------------------------------------------------------------------
         # Envoie un message en reponse.
         try:
-            await self.write_message(f"""> serveur_tornado.py:\n
-                                        Récept° d'1 message, redistribut°.""")
+
+            await self.write_message("01: > serveur_tornado.py:")
+
+            print("serveur_tornado.py")
+            print("Recept° d'1 message.")
+
         except Exception as e:
+
             lst.error(f"Erreur lors de l'envoi du message: {e}")
+
             print(f"Erreur lors de l'envoi du message: {e}")
+        # --------------------------------------------------------------------
 
         # Envoie à ts les clients sauf au client expediteur
         # le message reçu.
@@ -98,7 +107,7 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
         print(f"Récept° du message: {message_id}.")
         print(f"{message}")
 
-# Incrémente la variable pour le prochain ID
+        # Incrémente la variable pour le prochain ID
         WebSocketHandler.next_message_id += 1
 
     # ========================================================================

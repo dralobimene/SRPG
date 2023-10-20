@@ -147,7 +147,7 @@ class Screen04CreateCharacter:
         self.entry_name = tk.Entry(
             self.frame, textvariable=self.character_name)
         self.entry_name.grid(row=4, column=1, padx=15, sticky='w')
-        self.entry_name.bind('<KeyRelease>', self.check_and_update_button)
+        self.entry_name.bind('<KeyRelease>', self.checK_F4nd_update_button)
 
         self.label_guideline = tk.Label(
             self.frame, text='Only letters and or numbers, min 5 and max 15')
@@ -193,12 +193,6 @@ class Screen04CreateCharacter:
         self.btn_start_multiplayer_game.grid(
             row=10, column=1, padx=15, sticky="w")
         self.btn_start_multiplayer_game.grid_remove()
-
-        # ========================================================================
-        # la GUI pr parametrer le network.
-
-        # la variable pr renseigner l'IP du serveur
-        # self.ip_address = tk.StringVar()
 
         # ========================================================================
         # Appels de méthodes.
@@ -332,11 +326,11 @@ class Screen04CreateCharacter:
     # ========================================================================
 
     # Méthode pour vérifier et mettre à jour le bouton
-    def check_and_update_button(self, event=None):
+    def checK_F4nd_update_button(self, event=None):
         Utilitaires01.log_entry_message(logger,
                                         "debug",
                                         "screen04_create_character",
-                                        "method: def check_and_update_button()")
+                                        "method: def checK_F4nd_update_button()")
 
         valid_name = re.match(
             r'^[a-zA-Z0-9]{5,15}$', self.character_name.get())
@@ -347,7 +341,7 @@ class Screen04CreateCharacter:
         Utilitaires01.log_exit_message(logger,
                                        "debug",
                                        "screen04_create_character.py",
-                                       "method: def check_and_update_button()")
+                                       "method: def checK_F4nd_update_button()")
 
         return False
 
@@ -514,7 +508,7 @@ class Screen04CreateCharacter:
         # Ajouter en fin de fichier la valeur de client_ip.
         if file_network and file_writable:
             actual_ip = client_ip
-            ip_type = self.check_ip_type(actual_ip)
+            ip_type = self.checK_F3p_type(actual_ip)
 
             logger.info(f"Le fichier {file_network} est inscriptible")
             logger.info(f"Définition Type de l'IP (IP4 ou IP6): : {ip_type}")
@@ -526,10 +520,14 @@ class Screen04CreateCharacter:
                 with open(file_network, 'r') as f:
                     data = json.load(f)
 
-                # Ajouter la nouvelle paire clé => valeur
+                # Ajouter 2 nouvelles paires clé => valeur
                 new_key = "IP_user_adress"
                 new_value = actual_ip
                 data[new_key] = new_value
+
+                new_key_01 = "client_name"
+                new_value_01 = self.character_name.get()
+                data[new_key_01] = new_value_01
 
                 # Réecrire le fichier avec les anciennes et nvelles
                 # clés.
@@ -598,7 +596,7 @@ class Screen04CreateCharacter:
 
     # ========================================================================
 
-    def check_ip_type(self, ip_str: str) -> Union[str, None]:
+    def checK_F3p_type(self, ip_str: str) -> Union[str, None]:
         try:
             ip = ipaddress.ip_address(ip_str)
             if isinstance(ip, ipaddress.IPv4Address):

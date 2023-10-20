@@ -1,5 +1,6 @@
 # Fichier: classes/canvases/canvas_inventaire.py
 
+
 from classes.canvases.canvas00_base import BaseCanvas
 
 
@@ -15,5 +16,5 @@ class InventoryCanvas(BaseCanvas):
                          y=0,
                          alpha=255)
 
-        self.displayed = False
-        self.focused = False
+        self.is_displayed = False
+        self.is_focused = False

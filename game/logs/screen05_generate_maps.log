@@ -1,477 +1,477 @@
-2023-10-16 10:35:27,287 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:27,287 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:27,287 - screen05_generate_maps - DEBUG - >>> class: Screen05GenerateMaps
-2023-10-16 10:35:27,340 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:27,340 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:27,340 - screen05_generate_maps - DEBUG - >>> method: def __init__()
-2023-10-16 10:35:27,340 - screen05_generate_maps - INFO - Le fichier settings.json existe.
-2023-10-16 10:35:27,341 - screen05_generate_maps - INFO - Le fichier settings.json est accessible en lecture.
-2023-10-16 10:35:27,343 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:27,343 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:27,343 - screen05_generate_maps - DEBUG - Fin de la method: def __init__() <<<
-2023-10-16 10:35:27,343 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:28,985 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:28,986 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:28,986 - screen05_generate_maps - DEBUG - >>> method: def generate_txt_maps()
-2023-10-16 10:35:28,986 - screen05_generate_maps - INFO - > try: > appel Utilitaires01.read_file()
-2023-10-16 10:35:28,986 - screen05_generate_maps - INFO - def generate_txt_maps() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:28,987 - screen05_generate_maps - INFO - def generate_txt_maps() 02: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:28,987 - screen05_generate_maps - INFO - > appel Utilitaires01.directory_exists()
-2023-10-16 10:35:28,987 - screen05_generate_maps - WARNING - ============================================================
-2023-10-16 10:35:28,987 - screen05_generate_maps - WARNING - WARNING 01:
-2023-10-16 10:35:28,987 - screen05_generate_maps - INFO - Folder temp_txt_files does not exist, it should.
-2023-10-16 10:35:28,987 - screen05_generate_maps - INFO - Creation ...
-2023-10-16 10:35:28,987 - screen05_generate_maps - INFO - Fichier: screen05_generate_maps.py
-2023-10-16 10:35:28,987 - screen05_generate_maps - INFO - Méthode: generate_txt_maps()
-2023-10-16 10:35:28,988 - screen05_generate_maps - INFO - > appel Utilitaires01.create_folder()
-2023-10-16 10:35:28,989 - screen05_generate_maps - INFO - > appel Utilitaires01.is_folder_empty()
-2023-10-16 10:35:28,990 - screen05_generate_maps - INFO - ============================================================
-2023-10-16 10:35:28,990 - screen05_generate_maps - INFO - File: screen05_generate_maps.py
-2023-10-16 10:35:28,990 - screen05_generate_maps - INFO - Méthode: generate_txt_maps()
-2023-10-16 10:35:28,990 - screen05_generate_maps - INFO - Folder is empty, proceeding...
-2023-10-16 10:35:28,990 - screen05_generate_maps - INFO - > appel Utilitaires01.directory_exists()
-2023-10-16 10:35:28,991 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,007 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,007 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,007 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,007 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,008 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,008 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,008 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,008 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,008 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,014 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,018 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,019 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,019 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,019 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,019 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,019 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,019 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,019 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,020 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,035 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,039 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,039 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,039 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,039 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,039 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,039 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,039 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,039 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,040 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,055 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,069 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,069 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,069 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,069 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,069 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,069 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,069 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,069 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,070 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,074 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,076 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,076 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,076 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,076 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,076 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,076 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,076 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,076 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,077 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,085 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,087 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,087 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,087 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,087 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,087 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,087 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,088 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,088 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,088 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,096 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,104 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,104 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,104 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,104 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,105 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,105 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,105 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,105 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,105 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,108 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,110 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,111 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,111 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,111 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,111 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,111 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,111 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,111 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,111 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,119 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,121 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,121 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,121 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,121 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,121 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,121 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,121 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,121 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,122 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,129 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,137 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,137 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,137 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,137 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,138 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,138 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,138 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,138 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,138 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,141 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,178 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,178 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,178 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,178 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,178 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,178 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,178 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,178 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,179 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,182 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,184 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,184 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,184 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,184 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,184 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,184 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,184 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,184 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,185 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,193 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,201 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,201 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,201 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,201 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,201 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,201 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,201 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,201 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,202 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,205 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,213 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,213 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,213 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,213 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,213 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,213 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,213 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,213 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,214 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,217 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,225 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,225 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,225 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,225 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,226 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,226 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,226 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,226 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,226 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,229 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,232 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,232 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,232 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,232 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,232 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,232 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,232 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,232 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,232 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,241 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,249 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,249 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,249 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,249 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,249 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,249 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,249 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,249 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,250 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,253 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,256 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,256 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,256 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,256 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,256 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,256 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,256 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,256 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,256 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,264 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,266 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,266 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,266 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,266 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,266 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,267 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,267 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,267 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,267 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,275 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
-2023-10-16 10:35:29,283 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
-2023-10-16 10:35:29,283 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,283 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,283 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
-2023-10-16 10:35:29,283 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,283 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,283 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
-2023-10-16 10:35:29,283 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,284 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
-2023-10-16 10:35:29,287 - screen05_generate_maps - INFO - > appel Utilitaires01.create_directory()
-2023-10-16 10:35:29,288 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:29,288 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,288 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,288 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:29,288 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:29,293 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:29,294 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:29,404 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,404 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,404 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:29,404 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,406 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:29,406 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,406 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,406 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:29,406 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:29,410 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:29,411 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:29,519 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,519 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,519 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:29,519 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,521 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:29,521 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,521 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,521 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:29,521 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:29,525 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:29,525 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:29,625 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,625 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,625 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:29,625 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,626 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:29,626 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,626 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,626 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:29,626 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:29,628 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:29,628 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:29,669 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,669 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,669 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:29,669 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,670 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:29,670 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,670 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,670 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:29,670 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:29,674 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:29,674 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:29,778 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,778 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,778 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:29,778 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,780 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:29,780 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,780 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,780 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:29,780 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:29,782 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:29,782 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:29,825 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,825 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,825 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:29,825 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,825 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:29,825 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,825 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,825 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:29,825 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:29,827 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:29,827 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:29,872 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,872 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,872 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:29,872 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,873 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:29,873 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,873 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,873 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:29,873 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:29,877 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:29,877 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:29,987 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:29,987 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,987 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:29,987 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,988 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:29,988 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:29,988 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:29,988 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:29,988 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:29,992 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:29,992 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,160 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,160 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,161 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,161 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,162 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,162 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,162 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,162 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,162 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,164 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,164 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,209 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,210 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,210 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,210 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,210 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,210 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,210 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,210 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,210 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,212 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,212 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,253 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,253 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,253 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,253 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,253 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,253 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,253 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,253 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,253 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,255 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,255 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,302 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,302 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,302 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,302 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,302 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,302 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,302 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,302 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,302 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,306 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,306 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,409 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,409 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,409 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,409 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,411 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,411 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,411 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,411 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,411 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,445 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,445 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,551 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,551 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,551 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,551 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,553 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,553 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,553 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,553 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,553 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,555 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,555 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,595 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,595 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,595 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,595 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,596 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,596 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,596 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,596 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,596 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,599 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,600 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,699 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,699 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,699 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,699 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,700 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,700 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,700 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,700 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,700 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,702 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,702 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,744 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,744 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,744 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,744 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,744 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,745 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,745 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,745 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,745 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,749 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,749 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,853 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,853 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,853 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,853 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,854 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,854 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,855 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,855 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,855 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,856 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,856 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,896 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,896 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,897 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,897 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,897 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
-2023-10-16 10:35:30,897 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,897 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,897 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
-2023-10-16 10:35:30,897 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
-2023-10-16 10:35:30,899 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,899 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
-2023-10-16 10:35:30,942 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,942 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,942 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
-2023-10-16 10:35:30,942 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,943 - screen05_generate_maps - INFO - > appel choose_place_to_store_maps()
-2023-10-16 10:35:30,943 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,943 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,943 - screen05_generate_maps - DEBUG - >>> method: def choose_place_to_store_maps()
-2023-10-16 10:35:30,943 - screen05_generate_maps - INFO - La valeur de la clé 'mode' est: multiplayer
-2023-10-16 10:35:30,943 - screen05_generate_maps - INFO - ============================================================
-2023-10-16 10:35:30,943 - screen05_generate_maps - INFO - We need to store maps for a multiplayer mode game.
-2023-10-16 10:35:30,944 - screen05_generate_maps - INFO - > appel Utilitaires01.create_directory()
-2023-10-16 10:35:30,984 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,984 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,984 - screen05_generate_maps - DEBUG - Fin de la method: def generate_txt_maps() <<<
-2023-10-16 10:35:30,984 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,984 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,984 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,984 - screen05_generate_maps - DEBUG - >>> method: def open_new_window()
-2023-10-16 10:35:30,984 - screen05_generate_maps - INFO - open new window
-2023-10-16 10:35:30,985 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,985 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,985 - screen05_generate_maps - DEBUG - Fin de la method: def open_new_window() <<<
-2023-10-16 10:35:30,985 - screen05_generate_maps - DEBUG - ========================================================
-2023-10-16 10:35:30,985 - screen05_generate_maps - DEBUG - 
-2023-10-16 10:35:30,985 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
-2023-10-16 10:35:30,985 - screen05_generate_maps - DEBUG - Fin de la class: Screen05GenerateMaps <<<
-2023-10-16 10:35:30,985 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:01,326 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:01,326 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:01,326 - screen05_generate_maps - DEBUG - >>> class: Screen05GenerateMaps
+2023-10-20 08:25:01,361 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:01,361 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:01,361 - screen05_generate_maps - DEBUG - >>> method: def __init__()
+2023-10-20 08:25:01,362 - screen05_generate_maps - INFO - Le fichier settings.json existe.
+2023-10-20 08:25:01,362 - screen05_generate_maps - INFO - Le fichier settings.json est accessible en lecture.
+2023-10-20 08:25:01,364 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:01,364 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:01,365 - screen05_generate_maps - DEBUG - Fin de la method: def __init__() <<<
+2023-10-20 08:25:01,365 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,018 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,019 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,019 - screen05_generate_maps - DEBUG - >>> method: def generate_txt_maps()
+2023-10-20 08:25:03,019 - screen05_generate_maps - INFO - > try: > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,019 - screen05_generate_maps - INFO - def generate_txt_maps() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,020 - screen05_generate_maps - INFO - def generate_txt_maps() 02: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,020 - screen05_generate_maps - INFO - > appel Utilitaires01.directory_exists()
+2023-10-20 08:25:03,020 - screen05_generate_maps - WARNING - ============================================================
+2023-10-20 08:25:03,020 - screen05_generate_maps - WARNING - WARNING 01:
+2023-10-20 08:25:03,020 - screen05_generate_maps - INFO - Folder temp_txt_files does not exist, it should.
+2023-10-20 08:25:03,021 - screen05_generate_maps - INFO - Creation ...
+2023-10-20 08:25:03,021 - screen05_generate_maps - INFO - Fichier: screen05_generate_maps.py
+2023-10-20 08:25:03,021 - screen05_generate_maps - INFO - Méthode: generate_txt_maps()
+2023-10-20 08:25:03,021 - screen05_generate_maps - INFO - > appel Utilitaires01.create_folder()
+2023-10-20 08:25:03,024 - screen05_generate_maps - INFO - > appel Utilitaires01.is_folder_empty()
+2023-10-20 08:25:03,025 - screen05_generate_maps - INFO - ============================================================
+2023-10-20 08:25:03,025 - screen05_generate_maps - INFO - File: screen05_generate_maps.py
+2023-10-20 08:25:03,025 - screen05_generate_maps - INFO - Méthode: generate_txt_maps()
+2023-10-20 08:25:03,025 - screen05_generate_maps - INFO - Folder is empty, proceeding...
+2023-10-20 08:25:03,025 - screen05_generate_maps - INFO - > appel Utilitaires01.directory_exists()
+2023-10-20 08:25:03,025 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,034 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,034 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,034 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,034 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,034 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,034 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,034 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,034 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,034 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,037 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,043 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,043 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,043 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,043 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,044 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,044 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,044 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,044 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,044 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,046 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,052 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,052 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,052 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,052 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,052 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,052 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,052 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,052 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,053 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,055 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,057 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,057 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,057 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,057 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,057 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,057 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,057 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,057 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,058 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,064 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,085 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,085 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,085 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,085 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,085 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,085 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,085 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,085 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,086 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,088 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,090 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,090 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,090 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,090 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,090 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,090 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,090 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,090 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,090 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,096 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,102 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,102 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,102 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,102 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,102 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,102 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,102 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,102 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,102 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,105 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,106 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,106 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,106 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,106 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,107 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,107 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,107 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,107 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,107 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,112 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,118 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,118 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,118 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,118 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,118 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,118 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,118 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,118 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,118 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,121 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,127 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,127 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,127 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,127 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,127 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,127 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,127 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,127 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,127 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,130 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,132 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,132 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,132 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,132 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,132 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,132 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,132 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,132 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,132 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,139 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,141 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,141 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,141 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,141 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,141 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,141 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,141 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,141 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,141 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,148 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,151 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,152 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,152 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,152 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,152 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,152 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,152 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,152 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,152 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,159 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,161 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,161 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,161 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,161 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,161 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,161 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,161 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,161 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,162 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,168 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,177 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,177 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,177 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,177 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,178 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,178 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,178 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,178 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,178 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,181 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,187 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,187 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,187 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,187 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,187 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,187 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,187 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,187 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,188 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,190 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,193 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,193 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,193 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,193 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,193 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,193 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,193 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,193 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,194 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,200 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,202 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,202 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,202 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,202 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,202 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,202 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,202 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,202 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,203 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,210 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,219 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,219 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,219 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,219 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,219 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,219 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,219 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,219 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,219 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,223 - screen05_generate_maps - INFO - > appel Utilitaires01.random_map_generation()
+2023-10-20 08:25:03,226 - screen05_generate_maps - INFO - > appel Utilitaires01.handle_file_operations()
+2023-10-20 08:25:03,226 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,226 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,226 - screen05_generate_maps - DEBUG - >>> method: def remove_empty_first_line()
+2023-10-20 08:25:03,226 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,226 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,226 - screen05_generate_maps - DEBUG - Fin de la method: def remove_empty_first_line() <<<
+2023-10-20 08:25:03,226 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,226 - screen05_generate_maps - INFO - > appel Utilitaires01.replace_adjacent_characters()
+2023-10-20 08:25:03,233 - screen05_generate_maps - INFO - > appel Utilitaires01.create_directory()
+2023-10-20 08:25:03,234 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,234 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,234 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,234 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,234 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,236 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,236 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,278 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,278 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,278 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,278 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,279 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,279 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,279 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,279 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,279 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,282 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,282 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,320 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,320 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,320 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,320 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,321 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,321 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,321 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,321 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,321 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,325 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,325 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,416 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,416 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,416 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,416 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,417 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,417 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,417 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,417 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,417 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,421 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,421 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,511 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,511 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,511 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,511 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,512 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,512 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,512 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,512 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,513 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,516 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,516 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,612 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,612 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,612 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,612 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,613 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,613 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,613 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,613 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,613 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,616 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,617 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,712 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,712 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,713 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,713 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,713 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,714 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,714 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,714 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,714 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,715 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,715 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,753 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,753 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,753 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,753 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,754 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,754 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,754 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,754 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,754 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,755 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,755 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,789 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,789 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,789 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,789 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,790 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,790 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,790 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,790 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,790 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,791 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,791 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,826 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,826 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,826 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,826 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,826 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,826 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,826 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,826 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,826 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,830 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,830 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,911 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,911 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,911 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,911 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,912 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,912 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,912 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,912 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,912 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,914 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,914 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:03,947 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:03,947 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,947 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:03,947 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,948 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:03,948 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:03,948 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:03,948 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:03,948 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:03,951 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:03,951 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:04,037 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,037 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,037 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:04,037 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,038 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:04,038 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,038 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,039 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:04,039 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:04,042 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:04,042 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:04,121 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,121 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,121 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:04,121 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,121 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:04,122 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,122 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,122 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:04,122 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:04,123 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:04,123 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:04,153 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,154 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,154 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:04,154 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,154 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:04,154 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,154 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,154 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:04,154 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:04,155 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:04,155 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:04,188 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,188 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,188 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:04,188 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,189 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:04,189 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,189 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,189 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:04,189 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:04,207 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:04,207 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:04,239 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,239 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,239 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:04,239 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,239 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:04,240 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,240 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,240 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:04,240 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:04,241 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:04,241 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:04,274 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,274 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,275 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:04,275 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,275 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:04,275 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,275 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,275 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:04,275 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:04,278 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:04,278 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:04,356 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,356 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,356 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:04,356 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,357 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:04,357 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,357 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,357 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:04,357 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:04,360 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:04,360 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:04,436 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,436 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,436 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:04,436 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,437 - screen05_generate_maps - INFO - > appel generate_json_from_txt()
+2023-10-20 08:25:04,437 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,437 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,437 - screen05_generate_maps - DEBUG - >>> method: def generate_json_from_txt()
+2023-10-20 08:25:04,437 - screen05_generate_maps - INFO - > appel Utilitaires01.read_file()
+2023-10-20 08:25:04,440 - screen05_generate_maps - INFO - def generate_json_from_txt() 01: La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:04,440 - screen05_generate_maps - INFO - > appel Utilitaires01.write_json_file()
+2023-10-20 08:25:04,514 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,514 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,514 - screen05_generate_maps - DEBUG - Fin de la method: def generate_json_from_txt() <<<
+2023-10-20 08:25:04,514 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,515 - screen05_generate_maps - INFO - > appel choose_place_to_store_maps()
+2023-10-20 08:25:04,515 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,515 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,515 - screen05_generate_maps - DEBUG - >>> method: def choose_place_to_store_maps()
+2023-10-20 08:25:04,515 - screen05_generate_maps - INFO - La valeur de la clé 'mode' est: multiplayer
+2023-10-20 08:25:04,515 - screen05_generate_maps - INFO - ============================================================
+2023-10-20 08:25:04,515 - screen05_generate_maps - INFO - We need to store maps for a multiplayer mode game.
+2023-10-20 08:25:04,515 - screen05_generate_maps - INFO - > appel Utilitaires01.create_directory()
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - Fin de la method: def generate_txt_maps() <<<
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - >>> method: def open_new_window()
+2023-10-20 08:25:04,698 - screen05_generate_maps - INFO - open new window
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - Fin de la method: def open_new_window() <<<
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - ========================================================
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - 
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - File: screen05_generate_maps.py
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - Fin de la class: Screen05GenerateMaps <<<
+2023-10-20 08:25:04,698 - screen05_generate_maps - DEBUG - ========================================================

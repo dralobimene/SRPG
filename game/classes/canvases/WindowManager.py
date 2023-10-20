@@ -9,7 +9,11 @@ from classes.canvases.canvas_inventaire import InventoryCanvas
 
 class WindowManager:
     def __init__(self):
-        self.canvas_list = []  # Liste des canvas dans l'ordre de leur z-index
+
+        # Liste des canvas dans l'ordre de leur z-index
+        self.canvas_list = []
+
+        #
         self.focused_canvas = None
 
     def add_canvas(self, canvas):
@@ -49,7 +53,6 @@ class WindowManager:
                 break
 
     def is_additional_canvas_displayed(self, canvas_type):
-        main_canvases = [Maps01Canvas, Right01Canvas, InformationsCanvas]
         for canvas in self.canvas_list:
             if canvas.is_displayed and isinstance(canvas, canvas_type):
                 return True
@@ -77,3 +80,6 @@ class WindowManager:
                 else:
                     canvas.alpha = 100
                 canvas.draw(screen)
+
+    def process_events(self, event):
+        pass

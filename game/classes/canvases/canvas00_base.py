@@ -18,9 +18,10 @@ class BaseCanvas:
         self.canvas.fill(self.color)
         self.x: int = x
         self.y: int = y
-        self.displayed: bool = False
-        self.focused: bool = False
         self._alpha: int = alpha
+
+        self.is_displayed: bool = False
+        self.is_focused: bool = False
 
     # Getter pour l'attribut displayed
     @property

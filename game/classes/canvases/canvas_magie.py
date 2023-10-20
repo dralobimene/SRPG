@@ -16,5 +16,5 @@ class MagicalCanvas(BaseCanvas):
                          y=0,
                          alpha=255)
 
-        self.displayed = False
-        self.focused = False
+        self.is_displayed = False
+        self.is_focused = False

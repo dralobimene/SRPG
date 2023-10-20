@@ -22,6 +22,7 @@ from classes.canvases.canvas03_informations import InformationsCanvas
 from classes.canvases.canvas_inventaire import InventoryCanvas
 from classes.canvases.canvas_magie import MagicalCanvas
 from classes.canvases.canvas_aide import HelpCanvas
+from classes.windowsChat.ChatBox import ChatBox
 
 from logger_config import configure_logger
 # méthodes du logger (debug(), info(), warning(), error(), critical())
@@ -79,38 +80,14 @@ class Screen06Game:
         # Initialise tous les modules importés de Pygame.
         pygame.init()
 
-        #
-        self.window_manager = WindowManager()
-
-        # --------------------------------------------------------------------
-        # Définit° des variables reseau.
-
-        # Permettra l'instantiat° du client.
-        self.websocket_client = None
-
-        # Définira un élément de type Queue pour les
-        # messages.
-        self.file_messages = None
-
-        # Recevra la valeur envoyée par le serveur.
-        self.result1 = None
-
-        # Récuperera l'ip du fichier client.py.
-        self.ip_client = None
-
-        # --------------------------------------------------------------------
-
-        # Défini le titre de la fenêtre.
-        pygame.display.set_caption('game/screen06_game.py')
-
-        # Défini le nom du fichier json qui contient les
-        # settings
-        self.settings_file = "settings.json"
-
         # Définira les dimens° de la fenetre.
         # Définies ds le fichier settings.json.
         self.window_width = None
         self.window_height = None
+
+        # Défini le nom du fichier json qui contient les
+        # settings
+        self.settings_file = "settings.json"
 
         # Définira les dimensions des tiles.
         # Définies ds le fichier "settings.json".
@@ -120,7 +97,7 @@ class Screen06Game:
         # settings.json. Le mode est "monoplayer" ou "multiplayer".
         self.mode = None
 
-        # ---------------------------------------------------------------------
+        # --------------------------------------------------------------------
 
         # Vérifie si le fichier "settings.json" existe.
         if os.path.exists(self.settings_file):
@@ -140,7 +117,7 @@ class Screen06Game:
 
             sys.exit()
 
-        # ---------------------------------------------------------------------
+        # --------------------------------------------------------------------
 
         # Vérifie si le fichier settings.json est accessible en lecture,
         if os.access(self.settings_file, os.R_OK):
@@ -178,11 +155,41 @@ class Screen06Game:
 
             sys.exit()
 
-        # ---------------------------------------------------------------------
+        # --------------------------------------------------------------------
 
         # Crée une fenêtre de 1200x800 pixels.
         self.screen = pygame.display.set_mode((self.window_width,
                                                self.window_height))
+
+        # Initialise le gestionnaire d'interface utilisateur de pygame_gui,
+        # qui permet de gérer les éléments de l'interface utilisateur.
+        self.manager = pygame_gui.UIManager((1200, 800))
+
+        # --------------------------------------------------------------------
+        # Définit° des variables reseau.
+
+        # Permettra l'instantiat° du client.
+        self.websocket_client = None
+
+        # Définira un élément de type Queue pour les
+        # messages.
+        self.file_messages = None
+
+        # Recevra la valeur envoyée par le serveur.
+        # self.result1 = None
+
+        # Récuperera l'ip du fichier client.py.
+        self.ip_client = None
+
+        # Recuperera la valeur de la cle "client_name".
+        self.client_name = None
+
+        # --------------------------------------------------------------------
+
+        # Défini le titre de la fenêtre.
+        pygame.display.set_caption('game/screen06_game.py')
+
+        # ---------------------------------------------------------------------
 
         # definit le canvas chargé d'afficher la carte
         self.canvas01_maps = Maps01Canvas(self.CANVASES_PRINCIPAUX_WIDTH,
@@ -213,6 +220,17 @@ class Screen06Game:
         self.canvas03_informations = InformationsCanvas(self.CANVASES_PRINCIPAUX_WIDTH,
                                                         (self.window_height - self.CANVASES_PRINCIPAUX_HEIGHT))
 
+        #
+        self.window_manager = WindowManager()
+
+        if self.mode == "multiplayer":
+            #     # Instantiation de la chatbox.
+            #     # largeur - hauteur.
+            self.canvas = pygame.Surface((400, 400))
+            self.canvas.fill((128, 128, 128))
+            self.canvas_position = (800, 0)
+            self.chat_box = ChatBox(self.manager, self.canvas_position)
+
         # Ajout des canvases au WindowManager.
         self.window_manager.add_canvas(self.canvas01_maps)
         self.window_manager.add_canvas(self.canvas02_droite)
@@ -241,17 +259,21 @@ class Screen06Game:
             self.file_messages = Queue()
 
             # Reçoit la valeur envoyée par le serveur.
-            self.result1 = self.websocket_client.receive()
+            # self.result1 = self.websocket_client.receive()
 
             # Récupere l'ip du fichier client.py.
             self.ip_client = self.websocket_client.ip_client
 
+            # Définir la variable self.client_name.
+            self.client_name = Utilitaires01.get_key_value_from_json(
+                self.settings_file, "client_name")
+
             # Reçu sur la machine cliente.
             # La variable result1 est la valeur du message
             # défini sur le serveur.
-            print("> screen06_game.py: ")
-            print("Affiche la variable définie sur le serveur.")
-            print(f">>>>>> {self.result1}")
+            # print("> screen06_game.py: ")
+            # print("Affiche la variable définie sur le serveur.")
+            # print(f">>>>>> {self.result1}")
 
             #
             Thread(target=self.websocket_client.listen).start()
@@ -259,9 +281,12 @@ class Screen06Game:
             # Envoyer un message au démarrage de l'appli
             Utilitaires02Reseau.send_message(
                 self.websocket_client,
-                f"""\t\t>===================================\n
-                Bonjour, je suis la machine cliente1.\n
-                ==================================<""")
+                f"""
+03: >
+Connex°: {self.client_name}.
+<
+"""
+            )
 
         elif self.mode == "monoplayer":
             logger.info("Le moteur de jeu est en mode monoplayer.")
@@ -284,28 +309,23 @@ class Screen06Game:
 
         # ---------------------------------------------------------------------
 
-        # La fonction pygame.time.get_ticks() renvoie le nombre de
-        # millisecondes écoulées depuis l'initialisation de Pygame.
-        # Cette valeur est souvent utilisée pour contrôler le comportement du
-        # jeu en fonction du temps écoulé.
-        self.last_played = pygame.time.get_ticks()
-
-        # Initialise le gestionnaire d'interface utilisateur de pygame_gui,
-        # qui permet de gérer les éléments de l'interface utilisateur.
-        self.manager = pygame_gui.UIManager((1200,
-                                             800))
-
-        # Initialise le manager de la souris.
-        # initialise une instance de classes/MouseHandler.py
-        # pour la gest° de la souris
-        self.mouse_handler = MouseHandler(self.screen, self.window_manager)
-
         # Initialise le manager clavier.
         # initialise une instance de classes/KeyHandler.py
         # pour la gest° d'evenements clavier qui ne st pas rattachés
         # à l'instance de classes/Player.py.
         self.key_handler = KeyHandler(
             self.websocket_client, self.ip_client, self.file_messages, self)
+
+        # La fonction pygame.time.get_ticks() renvoie le nombre de
+        # millisecondes écoulées depuis l'initialisation de Pygame.
+        # Cette valeur est souvent utilisée pour contrôler le comportement du
+        # jeu en fonction du temps écoulé.
+        self.last_played = pygame.time.get_ticks()
+
+        # Initialise le manager de la souris.
+        # initialise une instance de classes/MouseHandler.py
+        # pour la gest° de la souris
+        self.mouse_handler = MouseHandler(self.screen, self.window_manager)
 
         # Crée un objet d'horloge qui peut être utilisé pour
         # contrôler le taux de rafraîchissement du jeu
@@ -324,7 +344,7 @@ class Screen06Game:
                                         "screen06_game.py",
                                         "method: def handle_events()")
 
-        mouse_x, mouse_y = pygame.mouse.get_pos()
+        # mouse_x, mouse_y = pygame.mouse.get_pos()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -376,6 +396,14 @@ class Screen06Game:
             elif event.type == pygame.KEYUP:
                 self.key_handler.handle_key_up(event.key)
 
+            # Active le manager de la ChatBox.
+            if self.mode == "multiplayer":
+                if not self.chat_box.process_events(event, self.manager, self.websocket_client):
+                    self.manager.process_events(event)
+
+            #
+            self.window_manager.process_events(event)
+
         Utilitaires01.log_exit_message(logger,
                                        "debug",
                                        "screen06_game.py",
@@ -391,6 +419,16 @@ class Screen06Game:
         #
         current_time = pygame.time.get_ticks()
 
+        # [REPERE 1 - 1]
+        # MAJ de la ChatBox.
+        # MAJ le widget: self.text_box de la classe
+        # ChatBox (fichier: classes/utilitaires/windowsChat.py).
+        # [REPERE 1 - 2] dans le fichier classes/windowsChat/ChatBox.py.
+        if self.mode == "multiplayer":
+            if not self.file_messages.empty():
+                new_message = self.file_messages.get()
+                self.chat_box.update_messages(new_message)
+
     # ========================================================================
 
     def render(self):
@@ -398,37 +436,17 @@ class Screen06Game:
         Pydoc de la methode render()
         """
 
-        # print("def render")
-
         # afficher l'ecran
         self.screen.fill(self.GREY_LIGHT_01)
 
-        # blit le canvas01_maps sur le screen
-        # self.canvas01_maps.draw(self.screen)
+        # Affiche la ChatBox.
+        if self.mode == "multiplayer":
+            self.screen.blit(self.canvas, self.canvas_position)
+            # self.manager.draw_ui(self.canvas)
+            self.manager.draw_ui(self.screen)
 
-        # Dessine le canvas02_droite à la droite de canvas01_maps.
-        # self.canvas02_droite.draw(self.screen)
-
-        # Dessine le canvas inventaire
-        # (au-dessus de la map)
-        # self.canvas_inventaire.draw(self.screen)
-
-        # Dessine le canvas magie
-        # (à droite)
-        # self.canvas_magie.draw(self.screen)
-
-        # blit le canvas04_informations sur le screen
-        # self.canvas03_informations.draw(self.screen)
-        # self.screen.blit(self.canvas04_informations,
-        #                  (0, self.canvas01_maps.get_height()))
-
-        # Dessine le canvas aide
-        # (au centre)
-        # Apparait au-dessus de tous les autres canvases
-        # car blitté en dernier.
-        # self.canvas_aide.draw(self.screen)
-
-        self.window_manager.render_all(self.screen)  # Dessine tous les canvas
+        # Dessine tous les canvas.
+        self.window_manager.render_all(self.screen)
 
     # ========================================================================
 

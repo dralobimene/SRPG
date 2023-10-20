@@ -4,5 +4,6 @@
     "tile_size": 10,
     "mode": "multiplayer",
     "type_game": "new_game",
-    "IP_user_adress": "192.168.1.220"
+    "IP_user_adress": "192.168.1.220",
+    "client_name": "client3"
 }

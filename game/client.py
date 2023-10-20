@@ -42,6 +42,9 @@ class WebSocketClient:
         #
         self.screen06_game = screen06_game
 
+        #
+        self.settings_file = "settings.json"
+
         # Définira l'adresse IP du serveur à l'instantiat°
         # de la classe ds le fichier screen06_game.py
         self.target = target
@@ -57,6 +60,11 @@ class WebSocketClient:
 
         # Défini son adresse IP.
         self.ip_client = self.get_local_ip_address()
+
+        # Défini le nom du client grâce à la valeur
+        # de la clé "client_name"
+        self.client_name = Utilitaires01.get_key_value_from_json(
+            self.settings_file, "client_name")
 
         Utilitaires01.log_exit_message(logger,
                                        "debug",
@@ -142,11 +150,13 @@ class WebSocketClient:
             current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
             message = f"""
-                        >=================================================
-                        client.py > screen06_game > serveur_tornado.py
-                        {current_time}, adresse IP: {client_ip}
-                        =================================================<
-                        """
+02: >
+client.py > screen06_game > serveur_tornado.py.
+{current_time}.
+adresse IP: {client_ip}.
+expediteur: {self.client_name}.
+<
+                """
             self.ws.send(message)
 
             # # Reçu sur le serveur.
@@ -241,6 +251,15 @@ class WebSocketClient:
         while self.is_connected:
             try:
                 message = self.ws.recv()
+                print(f"Message reçu depuis le serveur : {message}")
+
+                # [REPERE 1 - 3]
+                # Placer les messages reçus du serveur dans
+                # self.file_messages de screen06_game
+                # pour ensuite MAJ la self.text_box du fichier
+                # classes/windowsChat/ChatBox.py.
+                # [REPERE 1 - 2] dans classes/windowsChat/ChatBox.py.
+                self.screen06_game.file_messages.put(message)
 
                 logger.info("File:client.py")
                 logger.info("Méthode: listen()")

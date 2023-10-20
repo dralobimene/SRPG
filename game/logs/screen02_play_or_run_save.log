@@ -1,28 +1,28 @@
-2023-10-16 10:35:19,316 - screen02_play_or_run_save - DEBUG - ========================================================
-2023-10-16 10:35:19,316 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
-2023-10-16 10:35:19,316 - screen02_play_or_run_save - DEBUG - >>> class: Screen02PlayOrRunSave
-2023-10-16 10:35:19,372 - screen02_play_or_run_save - DEBUG - ========================================================
-2023-10-16 10:35:19,373 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
-2023-10-16 10:35:19,373 - screen02_play_or_run_save - DEBUG - >>> method: def __init__()
-2023-10-16 10:35:19,373 - screen02_play_or_run_save - INFO - Le fichier settings.json existe.
-2023-10-16 10:35:19,373 - screen02_play_or_run_save - INFO - Le fichier settings.json est accessible en lecture.
-2023-10-16 10:35:19,375 - screen02_play_or_run_save - DEBUG - 
-2023-10-16 10:35:19,376 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
-2023-10-16 10:35:19,376 - screen02_play_or_run_save - DEBUG - Fin de la method: def __init__() <<<
-2023-10-16 10:35:19,376 - screen02_play_or_run_save - DEBUG - ========================================================
-2023-10-16 10:35:20,725 - screen02_play_or_run_save - DEBUG - ========================================================
-2023-10-16 10:35:20,725 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save
-2023-10-16 10:35:20,726 - screen02_play_or_run_save - DEBUG - >>> method: def play_new_game()
-2023-10-16 10:35:20,726 - screen02_play_or_run_save - INFO - player wants to play new game
-2023-10-16 10:35:20,726 - screen02_play_or_run_save - INFO - Vérificat° du fichier settings.json
-2023-10-16 10:35:20,726 - screen02_play_or_run_save - INFO - Le fichier settings.json existe
-2023-10-16 10:35:20,726 - screen02_play_or_run_save - INFO - Le fichier settings.json est inscriptible
-2023-10-16 10:35:20,726 - screen02_play_or_run_save - INFO - Ecriture du type de partie (new game or save)
-2023-10-16 10:35:20,726 - screen02_play_or_run_save - DEBUG - 
-2023-10-16 10:35:20,727 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
-2023-10-16 10:35:20,727 - screen02_play_or_run_save - DEBUG - Fin de la method: def play_new_game() <<<
-2023-10-16 10:35:20,727 - screen02_play_or_run_save - DEBUG - ========================================================
-2023-10-16 10:35:20,727 - screen02_play_or_run_save - DEBUG - 
-2023-10-16 10:35:20,727 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
-2023-10-16 10:35:20,727 - screen02_play_or_run_save - DEBUG - Fin de la class: Screen02PlayOrRunSave <<<
-2023-10-16 10:35:20,727 - screen02_play_or_run_save - DEBUG - ========================================================
+2023-10-20 08:24:54,029 - screen02_play_or_run_save - DEBUG - ========================================================
+2023-10-20 08:24:54,029 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
+2023-10-20 08:24:54,029 - screen02_play_or_run_save - DEBUG - >>> class: Screen02PlayOrRunSave
+2023-10-20 08:24:54,067 - screen02_play_or_run_save - DEBUG - ========================================================
+2023-10-20 08:24:54,068 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
+2023-10-20 08:24:54,068 - screen02_play_or_run_save - DEBUG - >>> method: def __init__()
+2023-10-20 08:24:54,068 - screen02_play_or_run_save - INFO - Le fichier settings.json existe.
+2023-10-20 08:24:54,068 - screen02_play_or_run_save - INFO - Le fichier settings.json est accessible en lecture.
+2023-10-20 08:24:54,073 - screen02_play_or_run_save - DEBUG - 
+2023-10-20 08:24:54,073 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
+2023-10-20 08:24:54,073 - screen02_play_or_run_save - DEBUG - Fin de la method: def __init__() <<<
+2023-10-20 08:24:54,073 - screen02_play_or_run_save - DEBUG - ========================================================
+2023-10-20 08:24:55,266 - screen02_play_or_run_save - DEBUG - ========================================================
+2023-10-20 08:24:55,266 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - DEBUG - >>> method: def play_new_game()
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - INFO - player wants to play new game
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - INFO - Vérificat° du fichier settings.json
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - INFO - Le fichier settings.json existe
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - INFO - Le fichier settings.json est inscriptible
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - INFO - Ecriture du type de partie (new game or save)
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - DEBUG - 
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - DEBUG - Fin de la method: def play_new_game() <<<
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - DEBUG - ========================================================
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - DEBUG - 
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - DEBUG - File: screen02_play_or_run_save.py
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - DEBUG - Fin de la class: Screen02PlayOrRunSave <<<
+2023-10-20 08:24:55,267 - screen02_play_or_run_save - DEBUG - ========================================================

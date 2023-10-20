@@ -8,7 +8,7 @@ from datetime import datetime
 from classes.utilitaires.utilitaires_01 import Utilitaires01
 from classes.utilitaires.utilitaires_02_reseau import Utilitaires02Reseau
 
-from classes.canvases.canvas_aide import HelpCanvas  # Importer la classe HelpCanvas
+from classes.canvases.canvas_aide import HelpCanvas
 from classes.canvases.canvas_inventaire import InventoryCanvas
 
 
@@ -38,25 +38,25 @@ class KeyHandler:
             pygame.K_F1: [self.handle_F1_pressed, self.handle_F1_released],
             pygame.K_ESCAPE: [self.handle_Esc_pressed, self.handle_Esc_released],
             pygame.K_s: [self.handle_s_pressed, self.handle_s_released],
-            pygame.K_h: [self.handle_h_pressed, self.handle_h_released],
-            pygame.K_i: [self.handle_i_pressed, self.handle_i_released],
-            pygame.K_a: [self.handle_a_pressed, self.handle_a_released]
+            pygame.K_F2: [self.handle_F2_pressed, self.handle_F2_released],
+            pygame.K_F3: [self.handle_F3_pressed, self.handle_F3_released],
+            pygame.K_F4: [self.handle_F4_pressed, self.handle_F4_released]
         }
 
         self.help_dictionary = {
             pygame.K_F1: [self.handle_F1_pressed, self.handle_F1_released],
             pygame.K_ESCAPE: [self.handle_Esc_pressed, self.handle_Esc_released],
-            pygame.K_h: [None, self.handle_h_released_help],
-            pygame.K_i: [None, self.handle_i_released_help],
-            pygame.K_a: [None, self.handle_a_released_help]
+            pygame.K_F2: [None, self.handle_F2_released_help],
+            pygame.K_F3: [None, self.handle_F3_released_help],
+            pygame.K_F4: [None, self.handle_F4_released_help]
         }
 
         self.inventory_dictionary = {
             pygame.K_F1: [self.handle_F1_pressed, self.handle_F1_released],
             pygame.K_ESCAPE: [self.handle_Esc_pressed, self.handle_Esc_released],
-            pygame.K_h: [None, self.handle_h_released_inventory],
-            pygame.K_i: [None, self.handle_i_released_inventory],
-            pygame.K_a: [None, self.handle_a_released_inventory]
+            pygame.K_F2: [None, self.handle_F2_released_inventory],
+            pygame.K_F3: [None, self.handle_F3_released_inventory],
+            pygame.K_F4: [None, self.handle_F4_released_inventory]
         }
 
         self.states = {
@@ -87,6 +87,20 @@ class KeyHandler:
     # ========================================================================
 
     def get_current_state(self):
+        # from screen06_game import Screen06Game
+        #
+        # if isinstance(self.game_screen, Screen06Game):
+        #     if self.game_screen.window_manager.is_additional_canvas_displayed(HelpCanvas):
+        #         return "help_canvas"
+        #     elif self.game_screen.window_manager.is_additional_canvas_displayed(InventoryCanvas):
+        #         return "inventory_canvas"
+        #     else:
+        #         return "default"
+        # else:
+        #     print("Probleme:")
+        #     print("Fichier: classes/utilitaires/key_handler.py")
+        #     print("methode: get_current_state()")
+
         if self.game_screen.window_manager.is_additional_canvas_displayed(HelpCanvas):
             return "help_canvas"
         elif self.game_screen.window_manager.is_additional_canvas_displayed(InventoryCanvas):
@@ -150,18 +164,18 @@ class KeyHandler:
 
     # ------------------------------------------------------------------------
 
-    def handle_h_pressed(self):
-        print("'h' pressed, global_dictionary")
+    def handle_F2_pressed(self):
+        print("'F2' pressed, global_dictionary")
 
     # ------------------------------------------------------------------------
 
-    def handle_i_pressed(self):
-        print("'i' pressed, global_dictionary")
+    def handle_F3_pressed(self):
+        print("'F3' pressed, global_dictionary")
 
     # ------------------------------------------------------------------------
 
-    def handle_a_pressed(self):
-        print("'a' pressed, global_dictionary")
+    def handle_F4_pressed(self):
+        print("'F4' pressed, global_dictionary")
 
     # ------------------------------------------------------------------------
 
@@ -173,15 +187,27 @@ class KeyHandler:
         if self.mode == "multiplayer":
 
             # Placer CE message dans la file_messages.
-            self.file_messages.put("Je suis la machine cliente1 et je salue")
+            self.file_messages.put(
+                f"""
+05: >
+Fichier: key_handler.py.
+{current_time}.
+de IP: {self.ip_client}.
+Contenu:
+- msg de la file_messages
+"""
+            )
 
             try:
                 Utilitaires02Reseau.send_message(
                     self.websocket_client,
-                    f"""\t\t>===================================\n
-                            {current_time},\n
-                            Bonjour, je suis le client: {self.ip_client}\n
-                            ==================================<""")
+                    f"""
+04: >
+Fichier: key_handler.py.
+{current_time}
+de IP: {self.ip_client}.
+<"""
+                )
 
                 print("Mode multiplayer, 's' released, global_dictionary")
 
@@ -197,51 +223,51 @@ class KeyHandler:
 
     # ------------------------------------------------------------------------
 
-    def handle_h_released(self):
-        print("'h' released, global_dictionary")
+    def handle_F2_released(self):
+        print("'F2' released, global_dictionary")
         self.game_screen.window_manager.show_canvas(HelpCanvas)
 
     # ------------------------------------------------------------------------
 
-    def handle_i_released(self):
-        print("'i' released, global_dictionary")
+    def handle_F3_released(self):
+        print("'F3' released, global_dictionary")
         self.game_screen.window_manager.show_canvas(InventoryCanvas)
 
     # ------------------------------------------------------------------------
 
-    def handle_a_released(self):
-        print("'a' released, global_dictionary")
+    def handle_F4_released(self):
+        print("'F4' released, global_dictionary")
 
     # ========================================================================
     # ========================================================================
     # Méthodes pour le help_dictionary.
 
-    def handle_h_released_help(self):
-        print("'h' released, help_dictionary")
+    def handle_F2_released_help(self):
+        print("'F2' released, help_dictionary")
 
     # ------------------------------------------------------------------------
 
-    def handle_i_released_help(self):
-        print("'i' released, help_dictionary")
+    def handle_F3_released_help(self):
+        print("'F3' released, help_dictionary")
 
     # ------------------------------------------------------------------------
 
-    def handle_a_released_help(self):
-        print("'a' released, help_dictionary")
+    def handle_F4_released_help(self):
+        print("'F4' released, help_dictionary")
 
     # ========================================================================
     # ========================================================================
     # Méthodes pour le inventory_dictionary.
 
-    def handle_h_released_inventory(self):
-        print("'h' released, inventory_dictionary")
+    def handle_F2_released_inventory(self):
+        print("'F2' released, inventory_dictionary")
 
     # ------------------------------------------------------------------------
 
-    def handle_i_released_inventory(self):
-        print("'i' released, inventory_dictionary")
+    def handle_F3_released_inventory(self):
+        print("'F3' released, inventory_dictionary")
 
     # ------------------------------------------------------------------------
 
-    def handle_a_released_inventory(self):
-        print("'a' released, inventory_dictionary")
+    def handle_F4_released_inventory(self):
+        print("'F4' released, inventory_dictionary")
