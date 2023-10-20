@@ -26,3 +26,9 @@ Making A SRPG (Survival Role Playing Game).
 
 - Run first .py script  
   $ PYTHONPATH="/home/XXX/Documents/retest/SRPG/game" python3.11 /home/XXX/Documents/retest/SRPG/game/screen01_choose_mode.py  
+
+  20231020:  
+  server and chatBox done.  
+  Mise en place de la fonctionnalité tchat des clients.  
+  Les clients peuvent écrire dans le channel général.  
+  Il n'est pas possible de communiquer avec un client particulier.  
